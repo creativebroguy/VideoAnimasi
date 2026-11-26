@@ -1,0 +1,24 @@
+# Operating System
+.DS_Store
+Thumbs.db
+
+# Large Video/Audio files (Assets & Output)
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.wav
+*.mp3
+*.zip
+*.tar.gz
+
+# Ignore rendered cache & scratch
+04_Assets/audio/*
+!04_Assets/audio/.gitkeep
+04_Assets/reference_images/*
+!04_Assets/reference_images/.gitkeep
+
+# Environment & IDE
+.env
+.idea/
+.vscode/
