@@ -1,0 +1,97 @@
+{
+  "version": 1,
+  "historyId": "f895ee52-0e2d-4b98-be97-c6f37210118a",
+  "currentRevision": null,
+  "pendingChanges": false,
+  "files": {
+    "AGENTS.md": {
+      "hash": "729e31835a21c7b42ee006e2aacc63016abc05d26883f871ad3bf206943f2cfb",
+      "content": "/Users/user/.cache/hyperframes/history/f895ee52-0e2d-4b98-be97-c6f37210118a/blobs/72/729e31835a21c7b42ee006e2aacc63016abc05d26883f871ad3bf206943f2cfb"
+    },
+    "CLAUDE.md": {
+      "hash": "729e31835a21c7b42ee006e2aacc63016abc05d26883f871ad3bf206943f2cfb",
+      "content": "/Users/user/.cache/hyperframes/history/f895ee52-0e2d-4b98-be97-c6f37210118a/blobs/72/729e31835a21c7b42ee006e2aacc63016abc05d26883f871ad3bf206943f2cfb"
+    },
+    "episode_03_mie_instan_vo.mp3": {
+      "hash": "a678aeff6abad29ea35d36dd324f839c242fde8f2ca1454e0d037abb9f791cbd",
+      "content": "/Users/user/.cache/hyperframes/history/f895ee52-0e2d-4b98-be97-c6f37210118a/blobs/a6/a678aeff6abad29ea35d36dd324f839c242fde8f2ca1454e0d037abb9f791cbd"
+    },
+    "hyperframes.json": {
+      "hash": "53dbce1e19aa713cbb12ee0bc4d206143b45ab15e6ffbfcaa8f69572d4d24d50",
+      "content": "/Users/user/.cache/hyperframes/history/f895ee52-0e2d-4b98-be97-c6f37210118a/blobs/53/53dbce1e19aa713cbb12ee0bc4d206143b45ab15e6ffbfcaa8f69572d4d24d50"
+    },
+    "index.html": {
+      "hash": "f549166e92af49f2a059af2680230948e3170bff718c1dab3addea93e16652f4",
+      "content": "/Users/user/.cache/hyperframes/history/f895ee52-0e2d-4b98-be97-c6f37210118a/blobs/f5/f549166e92af49f2a059af2680230948e3170bff718c1dab3addea93e16652f4"
+    },
+    "meta.json": {
+      "hash": "86db8e6f07417c7e1f943082574afd3b18183998ae832d6b766aad5263a85c91",
+      "content": "/Users/user/.cache/hyperframes/history/f895ee52-0e2d-4b98-be97-c6f37210118a/blobs/86/86db8e6f07417c7e1f943082574afd3b18183998ae832d6b766aad5263a85c91"
+    },
+    "package.json": {
+      "hash": "5fd9b5ac89db8ac36d81e1eca2422d975e029c42ee753afd5f6b14a02c44b612",
+      "content": "/Users/user/.cache/hyperframes/history/f895ee52-0e2d-4b98-be97-c6f37210118a/blobs/5f/5fd9b5ac89db8ac36d81e1eca2422d975e029c42ee753afd5f6b14a02c44b612"
+    }
+  },
+  "revisions": {},
+  "checks": {
+    "latest": {
+      "revision": null,
+      "id": "8c92e17f-8f42-4862-a229-80b8e24f6067"
+    },
+    "revisions": {},
+    "unversioned": [
+      {
+        "id": "8c92e17f-8f42-4862-a229-80b8e24f6067",
+        "scope": "project",
+        "report": "/Users/user/Movies/00. Bahan/3. Antigravity/Video Ai/03_Projects/03_comic_history_mie_instan/video_project/.hyperframes/artifacts/checks/8c92e17f-8f42-4862-a229-80b8e24f6067.json",
+        "metadata": {
+          "ok": true,
+          "browserSkipped": false,
+          "options": {
+            "samples": 9,
+            "atTransitions": false,
+            "maxIssues": 80,
+            "collapseStatic": true,
+            "tolerance": 2,
+            "timeout": 45000,
+            "cache": true,
+            "contrast": true,
+            "craft": true,
+            "strict": false,
+            "snapshots": false,
+            "safeZones": [
+              "tiktok",
+              "reels",
+              "shorts"
+            ],
+            "browserGpuMode": "auto",
+            "includeUnmounted": false
+          }
+        },
+        "createdAt": 1795722125431,
+        "contentHash": "1d0a61a0e1501e9e88922a38d449f10853bf3524fa8addf9bb60dcdc336b44a2",
+        "revision": null,
+        "inputFingerprint": "288401919c723fb16e38f6b50302b700e76d2427fbe8c172f179ee5768e3e5aa",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      }
+    ]
+  },
+  "snapshots": {
+    "latest": null,
+    "revisions": {},
+    "unversioned": []
+  },
+  "renders": {
+    "latest": {
+      "id": "f1d1b22a-eea0-4afc-abe2-81f8dbff9d96",
+      "completedAt": 1795722184051,
+      "output": "/Users/user/Movies/00. Bahan/3. Antigravity/Video Ai/03_Projects/03_comic_history_mie_instan/mie_instan_history.mp4",
+      "status": "completed",
+      "revision": null
+    },
+    "retainedRevisions": []
+  },
+  "pendingArtifactCleanup": []
+}
