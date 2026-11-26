@@ -588,6 +588,13 @@
       tl.to("#final_title_card", { scale: 1.02, repeat: 8, yoyo: true, duration: 1.2, ease: "sine.inOut" }, 101.0);
 
       window.__timelines["main"] = tl;
+
+      // Lemo-Opuscar native engine compatibility interface
+      window.DUR = 116.1;
+      window.READY = true;
+      window.render = function(t) {
+        tl.seek(t);
+      };
     </script>
   </body>
 </html>
