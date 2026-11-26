@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="en" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,700;0,900;1,900&family=Dela+Gothic+One&display=swap');
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html, body {
+        margin: 0;
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        background: #08070d;
+        font-family: 'Barlow Semi Condensed', sans-serif;
+      }
+
+      #root {
+        position: relative;
+        width: 1080px;
+        height: 1920px;
+        background: radial-gradient(circle at 50% 30%, #1a162b 0%, #08070e 100%);
+      }
+
+      .clip {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+      }
+
+      /* 80s CRT & VHS Overlay */
+      .crt-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1080px;
+        height: 1920px;
+        pointer-events: none;
+        z-index: 100;
+        background: repeating-linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.15) 0px,
+          rgba(0, 0, 0, 0.15) 2px,
+          transparent 2px,
+          transparent 4px
+        );
+        box-shadow: inset 0 0 100px rgba(0,0,0,0.85);
+      }
+
+      .vhs-header {
+        position: absolute;
+        top: 60px;
+        left: 60px;
+        font-family: monospace;
+        font-size: 32px;
+        font-weight: bold;
+        color: rgba(0, 255, 128, 0.9);
+        text-shadow: 0 0 10px rgba(0, 255, 128, 0.8);
+        letter-spacing: 4px;
+        z-index: 101;
+      }
+
+      .vhs-time {
+        position: absolute;
+        top: 60px;
+        right: 60px;
+        font-family: monospace;
+        font-size: 32px;
+        font-weight: bold;
+        color: rgba(255, 230, 0, 0.9);
+        letter-spacing: 2px;
+        z-index: 101;
+      }
+
+      /* Subtitles in 80s anime style */
+      .subtitle-container {
+        position: absolute;
+        bottom: 220px;
+        left: 60px;
+        right: 60px;
+        text-align: center;
+        z-index: 90;
+      }
+
+      .subtitle-box {
+        display: inline-block;
+        background: rgba(10, 8, 18, 0.85);
+        border: 2px solid rgba(255, 230, 0, 0.7);
+        border-radius: 12px;
+        padding: 16px 32px;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.8);
+      }
+
+      .subtitle-text {
+        font-size: 42px;
+        font-weight: 800;
+        color: #fffbdf;
+        line-height: 1.3;
+        text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000;
+      }
+
+      .highlight {
+        color: #ffe600;
+        text-shadow: 0 0 16px rgba(255, 230, 0, 0.8);
+      }
+
+      /* Chrome 80s Anime Title */
+      .chrome-title {
+        font-family: 'Dela Gothic One', sans-serif;
+        font-size: 78px;
+        text-transform: uppercase;
+        letter-spacing: 6px;
+        text-align: center;
+        background: linear-gradient(180deg, #b0e0e6 0%, #ffffff 40%, #5d259c 45%, #e0287d 70%, #ffcc00 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        filter: drop-shadow(0 0 20px rgba(224, 40, 125, 0.6));
+      }
+
+      .kanji-sub {
+        font-family: 'Dela Gothic One', sans-serif;
+        font-size: 38px;
+        letter-spacing: 8px;
+        color: #00ffff;
+        text-shadow: 0 0 20px #00ffff;
+        margin-top: 10px;
+        text-align: center;
+      }
+
+      /* Radial speed lines */
+      .speed-lines {
+        position: absolute;
+        width: 1080px;
+        height: 1920px;
+        background: repeating-conic-gradient(
+          from 0deg,
+          rgba(255, 255, 255, 0.15) 0deg 4deg,
+          transparent 4deg 12deg
+        );
+        mix-blend-mode: screen;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="32.18"
+      data-width="1080"
+      data-height="1920"
+    >
+      <!-- Audio Voiceover Layer -->
+      <audio
+        id="a-roll-audio"
+        src="episode_02_cel_anime_vo.mp3"
+        data-start="0"
+        data-duration="32.18"
+        data-track-index="2"
+        data-volume="1"
+      ></audio>
+
+      <!-- VHS CRT Permanent Overlay -->
+      <div class="crt-overlay"></div>
+      <div class="vhs-header">▶ PLAY SP 1988</div>
+      <div class="vhs-time" id="vhs-counter">TAPE 00:00</div>
+
+      <!-- ================= SCENE 1: ANCAMAN ROBO-VAC (0s - 4.5s) ================= -->
+      <div id="scene1" class="clip" data-start="0" data-duration="4.5" data-track-index="1">
+        <svg width="1080" height="1920" viewBox="0 0 1080 1920">
+          <!-- Retro Parquet Floor with Perspective -->
+          <defs>
+            <linearGradient id="floorGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#1e1329" />
+              <stop offset="60%" stop-color="#3d1e18" />
+              <stop offset="100%" stop-color="#140908" />
+            </linearGradient>
+            <radialGradient id="sensorRed" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#ff0044" />
+              <stop offset="70%" stop-color="#ff0033aa" />
+              <stop offset="100%" stop-color="#ff002200" />
+            </radialGradient>
+          </defs>
+          <rect y="800" width="1080" height="1120" fill="url(#floorGrad)" />
+          
+          <!-- Perspective grid lines -->
+          <line x1="540" y1="800" x2="-200" y2="1920" stroke="#ff442233" stroke-width="4" />
+          <line x1="540" y1="800" x2="200" y2="1920" stroke="#ff442233" stroke-width="4" />
+          <line x1="540" y1="800" x2="880" y2="1920" stroke="#ff442233" stroke-width="4" />
+          <line x1="540" y1="800" x2="1280" y2="1920" stroke="#ff442233" stroke-width="4" />
+
+          <!-- Background Airbrushed City Skyline -->
+          <rect width="1080" height="800" fill="#080718" />
+          <polygon points="120,450 240,450 240,800 120,800" fill="#14112e" />
+          <polygon points="260,350 420,350 420,800 260,800" fill="#1b173d" />
+          <polygon points="680,380 880,380 880,800 680,800" fill="#14112e" />
+          <!-- Neon city window dots -->
+          <circle cx="300" cy="400" r="4" fill="#00ffff" />
+          <circle cx="340" cy="480" r="4" fill="#ff0099" />
+          <circle cx="750" cy="440" r="4" fill="#ffee00" />
+          
+          <!-- Robo-Vac Mecha Unit (Approaching) -->
+          <g id="robovac1" transform="translate(540, 1400)">
+            <!-- Red Laser Beam Cone -->
+            <polygon points="-60,0 60,0 240,500 -240,500" fill="url(#sensorRed)" opacity="0.6" />
+            <!-- Mecha Chasis -->
+            <ellipse cx="0" cy="0" rx="320" ry="140" fill="#1c202a" stroke="#00ffff" stroke-width="6" />
+            <ellipse cx="0" cy="-20" rx="280" ry="110" fill="#2b3140" stroke="#4a5568" stroke-width="4" />
+            <!-- Glowing Red Sensor Eye -->
+            <rect x="-120" y="-45" width="240" height="25" rx="10" fill="#ff0033" />
+            <rect id="laserPulse1" x="-100" y="-40" width="200" height="15" rx="7" fill="#ffffff" />
+            <!-- Japanese Kanji Warning Tag -->
+            <text data-layout-ignore="true" x="0" y="45" font-family="'Dela Gothic One', sans-serif" font-size="28" fill="#00ffff" text-anchor="middle" letter-spacing="4">掃除機・二型 警報</text>
+          </g>
+        </svg>
+
+        <div class="subtitle-container">
+          <div class="subtitle-box">
+            <div class="subtitle-text">
+              TAHUN 1988: SENJATA PEMBERSIH TANPA AMPUN...<br />
+              <span class="highlight">RO-BO-VAC TIPE DUA!</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= SCENE 2: OYEN-SAMA DI SOFA (4.5s - 11.5s) ================= -->
+      <div id="scene2" class="clip" data-start="4.5" data-duration="7" data-track-index="1">
+        <svg width="1080" height="1920" viewBox="0 0 1080 1920">
+          <defs>
+            <linearGradient id="sofaLeather" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#4a2511" />
+              <stop offset="100%" stop-color="#1e0c06" />
+            </linearGradient>
+            <radialGradient id="catAura" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#ff990088" />
+              <stop offset="100%" stop-color="#ff550000" />
+            </radialGradient>
+          </defs>
+
+          <!-- Retro 80s Living Room with Window Blinds -->
+          <rect width="1080" height="1920" fill="#0c0916" />
+          <!-- Neon City Blinds Light -->
+          <g opacity="0.25">
+            <line x1="0" y1="200" x2="1080" y2="200" stroke="#00ffff" stroke-width="12" />
+            <line x1="0" y1="280" x2="1080" y2="280" stroke="#00ffff" stroke-width="12" />
+            <line x1="0" y1="360" x2="1080" y2="360" stroke="#00ffff" stroke-width="12" />
+            <line x1="0" y1="440" x2="1080" y2="440" stroke="#00ffff" stroke-width="12" />
+            <line x1="0" y1="520" x2="1080" y2="520" stroke="#00ffff" stroke-width="12" />
+          </g>
+
+          <!-- Retro Sofa -->
+          <rect x="140" y="900" width="800" height="700" rx="50" fill="url(#sofaLeather)" stroke="#803d1c" stroke-width="8" />
+
+          <!-- OYEN-SAMA WARRIOR CAT (Cel Anime Style) -->
+          <g id="catWarrior" transform="translate(540, 960)">
+            <!-- Golden Energy Aura -->
+            <circle cx="0" cy="0" r="320" fill="url(#catAura)" />
+            <!-- Body Silhouette -->
+            <ellipse cx="0" cy="40" rx="180" ry="220" fill="#d96a14" stroke="#4a1804" stroke-width="8" />
+            <!-- White Chest Fur -->
+            <ellipse cx="0" cy="80" rx="100" ry="140" fill="#fcf3db" stroke="#8a531e" stroke-width="6" />
+            <!-- Cat Head -->
+            <ellipse cx="0" cy="-140" rx="160" ry="130" fill="#e07119" stroke="#4a1804" stroke-width="8" />
+            <!-- Ears -->
+            <polygon points="-120,-200 -140,-310 -30,-220" fill="#d96a14" stroke="#4a1804" stroke-width="8" />
+            <polygon points="-110,-210 -130,-280 -50,-225" fill="#f59595" />
+            <polygon points="120,-200 140,-310 30,-220" fill="#d96a14" stroke="#4a1804" stroke-width="8" />
+            <polygon points="110,-210 130,-280 50,-225" fill="#f59595" />
+            <!-- Glowing Anime Amber Eyes -->
+            <ellipse cx="-60" cy="-145" rx="38" ry="46" fill="#ffe600" stroke="#000" stroke-width="6" />
+            <ellipse cx="60" cy="-145" rx="38" ry="46" fill="#ffe600" stroke="#000" stroke-width="6" />
+            <!-- Slit Pupils with Backlit Flare -->
+            <ellipse cx="-60" cy="-145" rx="8" ry="34" fill="#000" />
+            <ellipse cx="60" cy="-145" rx="8" ry="34" fill="#000" />
+            <circle cx="-52" cy="-155" r="8" fill="#ffffff" />
+            <circle cx="68" cy="-155" r="8" fill="#ffffff" />
+            <!-- Tiger Stripes -->
+            <path d="M-130,-120 L-60,-130 M-140,-90 L-70,-100 M130,-120 L60,-130 M140,-90 L70,-100" stroke="#732703" stroke-width="8" stroke-linecap="round" />
+            <!-- Swishing Tail -->
+            <path id="catTail" d="M120,180 Q260,180 240,60" fill="none" stroke="#d96a14" stroke-width="32" stroke-linecap="round" />
+          </g>
+        </svg>
+
+        <div class="subtitle-container">
+          <div class="subtitle-box">
+            <div class="subtitle-text">
+              DARI ATAS SOFA KEKUASAANNYA...<br />
+              <span class="highlight">OYEN-SAMA MENGUNCI KOORDINAT MUSUH!</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= SCENE 3: CLOSE-UP EYE & SHING (11.5s - 18.5s) ================= -->
+      <div id="scene3" class="clip" data-start="11.5" data-duration="7" data-track-index="1">
+        <svg width="1080" height="1920" viewBox="0 0 1080 1920">
+          <rect width="1080" height="1920" fill="#06020e" />
+
+          <!-- 80s Anime Speed Stripes Background -->
+          <g opacity="0.3">
+            <line x1="0" y1="400" x2="1080" y2="400" stroke="#ff0055" stroke-width="16" />
+            <line x1="0" y1="600" x2="1080" y2="600" stroke="#ffe600" stroke-width="24" />
+            <line x1="0" y1="800" x2="1080" y2="800" stroke="#00ffff" stroke-width="16" />
+            <line x1="0" y1="1200" x2="1080" y2="1200" stroke="#ffe600" stroke-width="20" />
+          </g>
+
+          <!-- Extreme Macro Cat Eye -->
+          <g id="macroEyeGroup" transform="translate(540, 960)">
+            <!-- Eye Contour -->
+            <path d="M-420,0 Q-150,-260 420,-40 Q150,260 -420,0 Z" fill="#ffe600" stroke="#1c0702" stroke-width="18" />
+            <!-- Iris Layers -->
+            <circle cx="20" cy="0" r="220" fill="#f58207" />
+            <circle cx="20" cy="0" r="170" fill="#d44b02" />
+            <!-- Vertical Pupil -->
+            <ellipse cx="20" cy="0" rx="34" ry="190" fill="#000000" />
+            
+            <!-- 透過光 (Backlit Neon Star Flare) -->
+            <g id="starFlare" transform="translate(20, -40)">
+              <polygon points="0,-180 20,-20 180,0 20,20 0,180 -20,20 -180,0 -20,-20" fill="#ffffff" />
+              <circle cx="0" cy="0" r="45" fill="#ffffff" filter="drop-shadow(0 0 30px #00ffff)" />
+            </g>
+          </g>
+        </svg>
+
+        <div class="subtitle-container">
+          <div class="subtitle-box">
+            <div class="subtitle-text">
+              DENGAN KECEPATAN 12 FRAME PER DETIK...<br />
+              <span class="highlight">JURUS CAKAR BAYANGAN MELUNCUR!</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= SCENE 4: DIVE ATTACK & SPEED LINES (18.5s - 25.5s) ================= -->
+      <div id="scene4" class="clip" data-start="18.5" data-duration="7" data-track-index="1">
+        <div class="speed-lines"></div>
+        <svg width="1080" height="1920" viewBox="0 0 1080 1920">
+          <!-- Lightning Flashes -->
+          <path d="M540,100 L460,500 L620,800 L400,1400" stroke="#00ffff" stroke-width="16" fill="none" opacity="0.8" />
+          <path d="M540,200 L600,600 L480,900 L640,1500" stroke="#ffe600" stroke-width="12" fill="none" opacity="0.8" />
+
+          <!-- Neon Cyan Energy Claw Slash -->
+          <g id="clawSlash" transform="translate(540, 960)">
+            <path d="M-360,-400 Q0,0 360,400" stroke="#00ffff" stroke-width="36" stroke-linecap="round" fill="none" filter="drop-shadow(0 0 40px #00ffff)" />
+            <path d="M-260,-480 Q100,-80 460,320" stroke="#00ffff" stroke-width="24" stroke-linecap="round" fill="none" filter="drop-shadow(0 0 30px #00ffff)" />
+            <path d="M-460,-320 Q-100,80 260,480" stroke="#00ffff" stroke-width="24" stroke-linecap="round" fill="none" filter="drop-shadow(0 0 30px #00ffff)" />
+          </g>
+          
+          <!-- Impact Burst Center -->
+          <circle cx="540" cy="960" r="160" fill="#ffffff" opacity="0.9" filter="drop-shadow(0 0 80px #ffffff)" />
+        </svg>
+
+        <div class="subtitle-container">
+          <div class="subtitle-box">
+            <div class="subtitle-text">
+              <span class="highlight">BENTURAN DAHSYAT: CLAW VS STEEL!</span><br />
+              DUARRR! 💥
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= SCENE 5: VICTORY & TITLE CARD (25.5s - 32.18s) ================= -->
+      <div id="scene5" class="clip" data-start="25.5" data-duration="6.68" data-track-index="1">
+        <svg width="1080" height="1920" viewBox="0 0 1080 1920">
+          <defs>
+            <linearGradient id="sunsetCity" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#190d2e" />
+              <stop offset="50%" stop-color="#731f5a" />
+              <stop offset="75%" stop-color="#d95d39" />
+              <stop offset="100%" stop-color="#f0c265" />
+            </linearGradient>
+          </defs>
+
+          <!-- Nostalgic Pastel City-Pop Sunset -->
+          <rect width="1080" height="1200" fill="url(#sunsetCity)" />
+          <rect y="1200" width="1080" height="720" fill="#1b1528" />
+
+          <!-- The Cat Smugly Riding the Roomba -->
+          <g id="victoryRider" transform="translate(540, 1380)">
+            <!-- Roomba Base -->
+            <ellipse cx="0" cy="180" rx="280" ry="100" fill="#1b2029" stroke="#ffe600" stroke-width="6" />
+            <ellipse cx="0" cy="160" rx="240" ry="80" fill="#2d3748" />
+            <!-- Pacified Blue Light -->
+            <rect x="-80" y="145" width="160" height="16" rx="8" fill="#00ffcc" filter="drop-shadow(0 0 15px #00ffcc)" />
+            
+            <!-- Smug Cat Body -->
+            <ellipse cx="0" cy="20" rx="190" ry="170" fill="#e07119" stroke="#4a1804" stroke-width="8" />
+            <ellipse cx="0" cy="50" rx="110" ry="110" fill="#fcf3db" />
+            <!-- Head with Pilot Goggles -->
+            <ellipse cx="0" cy="-140" rx="140" ry="110" fill="#e07119" stroke="#4a1804" stroke-width="8" />
+            <!-- Aviator Goggles -->
+            <rect x="-110" y="-190" width="220" height="20" rx="8" fill="#2d3748" />
+            <circle cx="-50" cy="-180" r="34" fill="#00ffff" stroke="#1a202c" stroke-width="6" />
+            <circle cx="50" cy="-180" r="34" fill="#00ffff" stroke="#1a202c" stroke-width="6" />
+            <!-- Smug Closed Happy Eyes -->
+            <path d="M-65,-125 Q-45,-145 -25,-125" stroke="#3d1302" stroke-width="8" fill="none" stroke-linecap="round" />
+            <path d="M25,-125 Q45,-145 65,-125" stroke="#3d1302" stroke-width="8" fill="none" stroke-linecap="round" />
+            <!-- Smug Cat Smile -->
+            <path d="M-25,-90 Q0,-75 25,-90" stroke="#3d1302" stroke-width="8" fill="none" stroke-linecap="round" />
+          </g>
+        </svg>
+
+        <!-- 80s OVA Chrome Title -->
+        <div style="position: absolute; top: 280px; left: 0; width: 1080px; text-align: center;">
+          <div class="chrome-title">OYEN-SAMA</div>
+          <div class="kanji-sub">王・猫・無敵 1988</div>
+        </div>
+
+        <div class="subtitle-container">
+          <div class="subtitle-box">
+            <div class="subtitle-text">
+              MECHA PENAKLUK DEBU TELAH DITAKLUKKAN...<br />
+              <span class="highlight">MENJADI TUNGGANGAN PRIBADI SANG RAJA! 👑</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- GSAP Animation Driver -->
+    <script>
+      const tl = gsap.timeline({ paused: true });
+
+      // Scene 1: Approaching Roomba
+      tl.fromTo("#robovac1", { scale: 0.85, y: 1500 }, { scale: 1.15, y: 1350, duration: 4.5, ease: "power1.inOut" }, 0);
+      tl.to("#laserPulse1", { opacity: 0.4, repeat: 8, yoyo: true, duration: 0.25 }, 0);
+
+      // Scene 2: Cat on Sofa Swishing Tail
+      tl.fromTo("#catWarrior", { scale: 0.95 }, { scale: 1.05, duration: 7, ease: "sine.inOut" }, 4.5);
+      tl.to("#catTail", { rotation: 15, transformOrigin: "0% 100%", repeat: 6, yoyo: true, duration: 0.55 }, 4.5);
+
+      // Scene 3: Eye Crash Zoom and Star Glint Flare
+      tl.fromTo("#macroEyeGroup", { scale: 0.7 }, { scale: 1.25, duration: 7, ease: "power2.out" }, 11.5);
+      tl.fromTo("#starFlare", { scale: 0, rotation: 0 }, { scale: 1.5, rotation: 180, duration: 1.8, ease: "elastic.out(1, 0.4)" }, 12.0);
+
+      // Scene 4: Fast Dive Claw Slash & Rotating Speed lines
+      tl.fromTo("#clawSlash", { scale: 0.2, opacity: 0 }, { scale: 1.4, opacity: 1, duration: 0.6, ease: "power4.out" }, 18.5);
+      tl.fromTo("#scene4", { filter: "invert(1)" }, { filter: "invert(0)", duration: 0.15, repeat: 3 }, 18.5);
+      tl.to(".speed-lines", { rotation: 360, duration: 7, ease: "none" }, 18.5);
+
+      // Scene 5: Victory Roomba Ride
+      tl.fromTo("#victoryRider", { x: 300 }, { x: 780, duration: 6.68, repeat: 1, yoyo: true, ease: "sine.inOut" }, 25.5);
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

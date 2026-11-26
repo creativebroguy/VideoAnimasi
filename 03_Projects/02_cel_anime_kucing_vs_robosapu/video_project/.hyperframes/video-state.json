@@ -1,0 +1,115 @@
+{
+  "version": 1,
+  "historyId": "8797d5a4-8aa7-4ec9-9e1a-02fe10b3bdf9",
+  "currentRevision": "8287d4f9-4aeb-4ffb-a702-532cf2f50494",
+  "pendingChanges": false,
+  "files": {
+    "AGENTS.md": {
+      "hash": "729e31835a21c7b42ee006e2aacc63016abc05d26883f871ad3bf206943f2cfb",
+      "content": "/Users/user/.cache/hyperframes/history/8797d5a4-8aa7-4ec9-9e1a-02fe10b3bdf9/blobs/72/729e31835a21c7b42ee006e2aacc63016abc05d26883f871ad3bf206943f2cfb"
+    },
+    "CLAUDE.md": {
+      "hash": "729e31835a21c7b42ee006e2aacc63016abc05d26883f871ad3bf206943f2cfb",
+      "content": "/Users/user/.cache/hyperframes/history/8797d5a4-8aa7-4ec9-9e1a-02fe10b3bdf9/blobs/72/729e31835a21c7b42ee006e2aacc63016abc05d26883f871ad3bf206943f2cfb"
+    },
+    "episode_02_cel_anime_vo.mp3": {
+      "hash": "c234afa4cdee2c0283c1ebf64dedf0ba1a351117069fd1491112082fe775933a",
+      "content": "/Users/user/.cache/hyperframes/history/8797d5a4-8aa7-4ec9-9e1a-02fe10b3bdf9/blobs/c2/c234afa4cdee2c0283c1ebf64dedf0ba1a351117069fd1491112082fe775933a"
+    },
+    "hyperframes.json": {
+      "hash": "53dbce1e19aa713cbb12ee0bc4d206143b45ab15e6ffbfcaa8f69572d4d24d50",
+      "content": "/Users/user/.cache/hyperframes/history/8797d5a4-8aa7-4ec9-9e1a-02fe10b3bdf9/blobs/53/53dbce1e19aa713cbb12ee0bc4d206143b45ab15e6ffbfcaa8f69572d4d24d50"
+    },
+    "index.html": {
+      "hash": "4bb9353c818f524fe10da9770688f39a0efc537f9bfd1052f5848e79f0070a82",
+      "content": "/Users/user/.cache/hyperframes/history/8797d5a4-8aa7-4ec9-9e1a-02fe10b3bdf9/blobs/4b/4bb9353c818f524fe10da9770688f39a0efc537f9bfd1052f5848e79f0070a82"
+    },
+    "meta.json": {
+      "hash": "40c624d1495b32b5637d5fc323b4cc3a54ecd48185c7433408cbb5004634b1e9",
+      "content": "/Users/user/.cache/hyperframes/history/8797d5a4-8aa7-4ec9-9e1a-02fe10b3bdf9/blobs/40/40c624d1495b32b5637d5fc323b4cc3a54ecd48185c7433408cbb5004634b1e9"
+    },
+    "package.json": {
+      "hash": "5fd9b5ac89db8ac36d81e1eca2422d975e029c42ee753afd5f6b14a02c44b612",
+      "content": "/Users/user/.cache/hyperframes/history/8797d5a4-8aa7-4ec9-9e1a-02fe10b3bdf9/blobs/5f/5fd9b5ac89db8ac36d81e1eca2422d975e029c42ee753afd5f6b14a02c44b612"
+    }
+  },
+  "revisions": {
+    "8287d4f9-4aeb-4ffb-a702-532cf2f50494": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1795721813301,
+      "endedAt": 1795721813302,
+      "files": {
+        "index.html": {
+          "before": "/Users/user/.cache/hyperframes/history/8797d5a4-8aa7-4ec9-9e1a-02fe10b3bdf9/blobs/4c/4ca174445d0ced5f7b6dfff7b9a02dd8eb55ae3af3b0db2750586aa449da6e72",
+          "after": "/Users/user/.cache/hyperframes/history/8797d5a4-8aa7-4ec9-9e1a-02fe10b3bdf9/blobs/4b/4bb9353c818f524fe10da9770688f39a0efc537f9bfd1052f5848e79f0070a82"
+        }
+      }
+    }
+  },
+  "checks": {
+    "latest": {
+      "revision": null,
+      "id": "8abcd84b-e0fb-4c83-a40d-45c6eb23b725"
+    },
+    "revisions": {},
+    "unversioned": [
+      {
+        "id": "8abcd84b-e0fb-4c83-a40d-45c6eb23b725",
+        "scope": "project",
+        "report": "/Users/user/Movies/00. Bahan/3. Antigravity/Video Ai/03_Projects/02_cel_anime_kucing_vs_robosapu/video_project/.hyperframes/artifacts/checks/8abcd84b-e0fb-4c83-a40d-45c6eb23b725.json",
+        "metadata": {
+          "ok": true,
+          "browserSkipped": false,
+          "options": {
+            "samples": 9,
+            "atTransitions": false,
+            "maxIssues": 80,
+            "collapseStatic": true,
+            "tolerance": 2,
+            "timeout": 45000,
+            "cache": true,
+            "contrast": true,
+            "craft": true,
+            "strict": false,
+            "snapshots": false,
+            "safeZones": [
+              "tiktok",
+              "reels",
+              "shorts"
+            ],
+            "browserGpuMode": "auto",
+            "includeUnmounted": false
+          }
+        },
+        "createdAt": 1795721776514,
+        "contentHash": "a99c4b95452aec2bc6403723dba6482bd686162d38f9d8da22f6c372d6e311cc",
+        "revision": null,
+        "inputFingerprint": "69cdcdf00c0884f0d1f8e8deec0d33073a9647f8e56c0f64175836176ffafe8b",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      }
+    ]
+  },
+  "snapshots": {
+    "latest": null,
+    "revisions": {},
+    "unversioned": []
+  },
+  "renders": {
+    "latest": {
+      "id": "1be6b49a-c241-4627-8597-6e06c953547e",
+      "completedAt": 1795721903874,
+      "output": "/Users/user/Movies/00. Bahan/3. Antigravity/Video Ai/03_Projects/02_cel_anime_kucing_vs_robosapu/oyen_vs_robosapu.mp4",
+      "status": "completed",
+      "revision": "8287d4f9-4aeb-4ffb-a702-532cf2f50494"
+    },
+    "retainedRevisions": [
+      "8287d4f9-4aeb-4ffb-a702-532cf2f50494"
+    ]
+  },
+  "pendingArtifactCleanup": []
+}

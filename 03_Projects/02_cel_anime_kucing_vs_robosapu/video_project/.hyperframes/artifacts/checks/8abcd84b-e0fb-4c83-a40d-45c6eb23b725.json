@@ -1,0 +1,779 @@
+{
+  "ok": true,
+  "strict": false,
+  "browserSkipped": false,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 7,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "composition_file_too_large",
+        "severity": "warning",
+        "message": "This HTML composition file has 315 lines. Smaller sub-compositions are easier to read, iterate on, and diff.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "/Users/user/Movies/00. Bahan/3. Antigravity/Video Ai/03_Projects/02_cel_anime_kucing_vs_robosapu/video_project/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Split coherent scenes or layers into separate .html files under compositions/, then mount them from the parent with data-composition-src so each file stays small enough to inspect, revise, and validate independently."
+      },
+      {
+        "code": "timeline_track_too_dense",
+        "severity": "warning",
+        "message": "This HTML file has 5 timed elements. Smaller sub-compositions keep timelines easier to read, iterate on, and diff.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "/Users/user/Movies/00. Bahan/3. Antigravity/Video Ai/03_Projects/02_cel_anime_kucing_vs_robosapu/video_project/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move coherent scene groups into separate .html files under compositions/ and mount them from the parent with data-composition-src so the timeline stays easier to inspect, revise, and validate."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"scene1\"> is a timeline element that contains nested <svg>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#scene1",
+        "dataAttributes": {},
+        "sourceFile": "/Users/user/Movies/00. Bahan/3. Antigravity/Video Ai/03_Projects/02_cel_anime_kucing_vs_robosapu/video_project/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"scene1\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"scene2\"> is a timeline element that contains nested <svg>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#scene2",
+        "dataAttributes": {},
+        "sourceFile": "/Users/user/Movies/00. Bahan/3. Antigravity/Video Ai/03_Projects/02_cel_anime_kucing_vs_robosapu/video_project/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"scene2\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"scene3\"> is a timeline element that contains nested <svg>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#scene3",
+        "dataAttributes": {},
+        "sourceFile": "/Users/user/Movies/00. Bahan/3. Antigravity/Video Ai/03_Projects/02_cel_anime_kucing_vs_robosapu/video_project/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"scene3\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"scene4\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#scene4",
+        "dataAttributes": {},
+        "sourceFile": "/Users/user/Movies/00. Bahan/3. Antigravity/Video Ai/03_Projects/02_cel_anime_kucing_vs_robosapu/video_project/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"scene4\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"scene5\"> is a timeline element that contains nested <svg>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#scene5",
+        "dataAttributes": {},
+        "sourceFile": "/Users/user/Movies/00. Bahan/3. Antigravity/Video Ai/03_Projects/02_cel_anime_kucing_vs_robosapu/video_project/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"scene5\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      }
+    ],
+    "filesScanned": 1
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "layout": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 10,
+    "infoCount": 3,
+    "findings": [
+      {
+        "code": "container_overflow",
+        "severity": "warning",
+        "time": 19.666,
+        "selector": "#clawSlash",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": 80,
+          "top": 480,
+          "right": 1368,
+          "bottom": 1824,
+          "width": 1288,
+          "height": 1344
+        },
+        "containerSelector": "#scene4 > svg:nth-of-type(1)",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "right": 288
+        },
+        "dataAttributes": {
+          "data-svg-origin": "-460 -480"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 80,
+          "y": 480,
+          "width": 1288,
+          "height": 1344
+        },
+        "firstSeen": 19.666,
+        "lastSeen": 23.241,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          19.666,
+          23.241
+        ]
+      },
+      {
+        "selector": "div.vhs-header",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 60,
+          "y": 60,
+          "width": 325.72,
+          "height": 38
+        },
+        "time": 1.788,
+        "rect": {
+          "left": 60,
+          "top": 60,
+          "right": 385.72,
+          "bottom": 98,
+          "width": 325.72,
+          "height": 38
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "▶ PLAY SP 1988",
+        "message": "<div> \"▶ PLAY SP 1988\" is outside the safe area: TikTok (top edge), Instagram Reels (top edge), YouTube Shorts (top edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 1.788,
+        "lastSeen": 30.392,
+        "occurrences": 9,
+        "heldMs": 0,
+        "times": [
+          1.788,
+          5.363,
+          8.939,
+          12.514,
+          16.09,
+          19.666,
+          23.241,
+          26.817,
+          30.392
+        ]
+      },
+      {
+        "selector": "#vhs-counter",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 807.34,
+          "y": 60,
+          "width": 212.66,
+          "height": 38
+        },
+        "time": 1.788,
+        "rect": {
+          "left": 807.34,
+          "top": 60,
+          "right": 1020,
+          "bottom": 98,
+          "width": 212.66,
+          "height": 38
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "TAPE 00:00",
+        "message": "<div> \"TAPE 00:00\" is outside the safe area: TikTok (top edge), Instagram Reels (top edge), YouTube Shorts (top edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 1.788,
+        "lastSeen": 30.392,
+        "occurrences": 9,
+        "heldMs": 0,
+        "times": [
+          1.788,
+          5.363,
+          8.939,
+          12.514,
+          16.09,
+          19.666,
+          23.241,
+          26.817,
+          30.392
+        ]
+      },
+      {
+        "selector": "#robovac1 > text:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 405,
+          "y": 1457.96,
+          "width": 233.2,
+          "height": 37.7
+        },
+        "time": 1.788,
+        "rect": {
+          "left": 405,
+          "top": 1457.96,
+          "right": 638.2,
+          "bottom": 1495.66,
+          "width": 233.2,
+          "height": 37.7
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "掃除機・二型 警報",
+        "message": "<text> \"掃除機・二型 警報\" is outside the safe area: TikTok (bottom edge), Instagram Reels (bottom edge), YouTube Shorts (bottom edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 1.788,
+        "lastSeen": 1.788,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          1.788
+        ]
+      },
+      {
+        "selector": "#scene1 > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 101.11,
+          "y": 1574.81,
+          "width": 877.77,
+          "height": 104.6
+        },
+        "time": 1.788,
+        "rect": {
+          "left": 101.11,
+          "top": 1574.81,
+          "right": 978.88,
+          "bottom": 1679.41,
+          "width": 877.77,
+          "height": 104.6
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "TAHUN 1988: SENJATA PEMBERSIH TANPA AMPUN... RO-",
+        "message": "<div> \"TAHUN 1988: SENJATA PEMBERSIH TANPA AMPUN... RO-\" is outside the safe area: TikTok (bottom edge), Instagram Reels (bottom edge), YouTube Shorts (bottom edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 1.788,
+        "lastSeen": 1.788,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          1.788
+        ]
+      },
+      {
+        "selector": "#scene2 > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 169.03,
+          "y": 1574.81,
+          "width": 741.94,
+          "height": 104.6
+        },
+        "time": 5.363,
+        "rect": {
+          "left": 169.03,
+          "top": 1574.81,
+          "right": 910.97,
+          "bottom": 1679.41,
+          "width": 741.94,
+          "height": 104.6
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "DARI ATAS SOFA KEKUASAANNYA... OYEN-SAMA MENGUNC",
+        "message": "<div> \"DARI ATAS SOFA KEKUASAANNYA... OYEN-SAMA MENGUNC\" is outside the safe area: TikTok (bottom edge), Instagram Reels (bottom edge), YouTube Shorts (bottom edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 5.363,
+        "lastSeen": 8.939,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          5.363,
+          8.939
+        ]
+      },
+      {
+        "selector": "#scene3 > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 168,
+          "y": 1574.81,
+          "width": 744,
+          "height": 104.6
+        },
+        "time": 12.514,
+        "rect": {
+          "left": 168,
+          "top": 1574.81,
+          "right": 912,
+          "bottom": 1679.41,
+          "width": 744,
+          "height": 104.6
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "DENGAN KECEPATAN 12 FRAME PER DETIK... JURUS CAK",
+        "message": "<div> \"DENGAN KECEPATAN 12 FRAME PER DETIK... JURUS CAK\" is outside the safe area: TikTok (bottom edge), Instagram Reels (bottom edge), YouTube Shorts (bottom edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 12.514,
+        "lastSeen": 16.09,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          12.514,
+          16.09
+        ]
+      },
+      {
+        "selector": "#scene4 > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 206.33,
+          "y": 1574.81,
+          "width": 667.34,
+          "height": 104.6
+        },
+        "time": 19.666,
+        "rect": {
+          "left": 206.33,
+          "top": 1574.81,
+          "right": 873.67,
+          "bottom": 1679.41,
+          "width": 667.34,
+          "height": 104.6
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "DUARRR! 💥 BENTURAN DAHSYAT: CLAW VS STEEL!",
+        "message": "<div> \"DUARRR! 💥 BENTURAN DAHSYAT: CLAW VS STEEL!\" is outside the safe area: TikTok (bottom edge), Instagram Reels (bottom edge), YouTube Shorts (bottom edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 19.666,
+        "lastSeen": 23.241,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          19.666,
+          23.241
+        ]
+      },
+      {
+        "selector": "div.chrome-title",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 199.31,
+          "y": 280,
+          "width": 681.36,
+          "height": 112
+        },
+        "time": 26.817,
+        "rect": {
+          "left": 199.31,
+          "top": 280,
+          "right": 880.67,
+          "bottom": 392,
+          "width": 681.36,
+          "height": 112
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "OYEN-SAMA",
+        "message": "<div> \"OYEN-SAMA\" is outside the safe area: YouTube Shorts (top edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 26.817,
+        "lastSeen": 30.392,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          26.817,
+          30.392
+        ]
+      },
+      {
+        "selector": "#scene5 > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 126.14,
+          "y": 1574.81,
+          "width": 827.7,
+          "height": 104.6
+        },
+        "time": 26.817,
+        "rect": {
+          "left": 126.14,
+          "top": 1574.81,
+          "right": 953.84,
+          "bottom": 1679.41,
+          "width": 827.7,
+          "height": 104.6
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "MECHA PENAKLUK DEBU TELAH DITAKLUKKAN... MENJADI",
+        "message": "<div> \"MECHA PENAKLUK DEBU TELAH DITAKLUKKAN... MENJADI\" is outside the safe area: TikTok (bottom edge), Instagram Reels (bottom edge), YouTube Shorts (bottom edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 26.817,
+        "lastSeen": 30.392,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          26.817,
+          30.392
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 1.788,
+        "selector": "#scene1 > svg:nth-of-type(1) > line:nth-of-type(1)",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": -200,
+          "top": 800,
+          "right": 540,
+          "bottom": 1920,
+          "width": 740,
+          "height": 1120
+        },
+        "containerSelector": "#scene1 > svg:nth-of-type(1)",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "left": 200
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": -200,
+          "y": 800,
+          "width": 740,
+          "height": 1120
+        },
+        "firstSeen": 1.788,
+        "lastSeen": 1.788,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          1.788
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 1.788,
+        "selector": "#scene1 > svg:nth-of-type(1) > line:nth-of-type(4)",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": 540,
+          "top": 800,
+          "right": 1280,
+          "bottom": 1920,
+          "width": 740,
+          "height": 1120
+        },
+        "containerSelector": "#scene1 > svg:nth-of-type(1)",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "right": 200
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 540,
+          "y": 800,
+          "width": 740,
+          "height": 1120
+        },
+        "firstSeen": 1.788,
+        "lastSeen": 1.788,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          1.788
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 12.514,
+        "selector": "#macroEyeGroup",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": -151.07,
+          "top": 154.06,
+          "right": 879.02,
+          "bottom": 1137.58,
+          "width": 1030.09,
+          "height": 983.52
+        },
+        "containerSelector": "#scene3 > svg:nth-of-type(1)",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "left": 151.07
+        },
+        "dataAttributes": {
+          "data-svg-origin": "-420 -220"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": -151.07,
+          "y": 154.06,
+          "width": 1030.09,
+          "height": 983.52
+        },
+        "firstSeen": 12.514,
+        "lastSeen": 16.09,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          12.514,
+          16.09
+        ]
+      }
+    ],
+    "duration": 32.18,
+    "samples": [
+      1.788,
+      5.363,
+      8.939,
+      12.514,
+      16.09,
+      19.666,
+      23.241,
+      26.817,
+      30.392
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 13,
+    "truncated": false,
+    "faceCheck": {
+      "ran": true,
+      "candidates": 0,
+      "faces": 0
+    }
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": false,
+    "samples": 0
+  },
+  "contrast": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 1,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 1.49:1; WCAG AA requires 3:1.",
+        "text": "OYEN-SAMA",
+        "fg": "rgb(0,0,0)",
+        "bg": "rgb(73,23,68)",
+        "ratio": 1.49,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(116,116,116)",
+        "large": true,
+        "selector": "div > div:nth-of-type(8) > div:nth-of-type(1) > div:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 280,
+          "width": 1080,
+          "height": 112
+        },
+        "time": 30.392,
+        "times": [
+          30.392
+        ]
+      }
+    ],
+    "enabled": true,
+    "samples": [
+      1.788,
+      8.939,
+      16.09,
+      23.241,
+      30.392
+    ],
+    "checked": 23,
+    "passed": 22
+  },
+  "craft": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 2,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and \"掃除機・二型 警報\" renders at 24 px for 2.25 s: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "掃除機・二型 警報",
+        "selector": "#robovac1 > text:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 386.84,
+          "y": 1490.05,
+          "width": 210.32,
+          "height": 34
+        },
+        "time": 0,
+        "times": [
+          0
+        ],
+        "fontPx": 23.8,
+        "floorPx": 28,
+        "seconds": 2.245,
+        "elements": [
+          {
+            "selector": "#robovac1 > text:nth-of-type(1)",
+            "text": "掃除機・二型 警報",
+            "fontPx": 23.8,
+            "time": 0,
+            "seconds": 2.245
+          }
+        ]
+      },
+      {
+        "code": "dead_stretch",
+        "severity": "warning",
+        "message": "Nothing on screen changes for 6.24 s (19.21–25.45 s): start the next move within 3 s, or put data-hold on the element whose stillness is deliberate; see references/motion.md.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 19.208,
+        "seconds": 6.237,
+        "floorSeconds": 3,
+        "until": 25.445
+      }
+    ],
+    "enabled": true,
+    "step": 0.125,
+    "samples": 258
+  },
+  "audio": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "hdr": {
+    "autoPromotion": null,
+    "inspection": "available"
+  },
+  "snapshots": {
+    "enabled": false,
+    "files": [],
+    "times": [],
+    "findingFiles": []
+  }
+}
