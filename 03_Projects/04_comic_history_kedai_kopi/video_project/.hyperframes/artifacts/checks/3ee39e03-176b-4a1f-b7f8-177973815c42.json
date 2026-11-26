@@ -1,0 +1,1998 @@
+{
+  "ok": false,
+  "strict": false,
+  "browserSkipped": false,
+  "lint": {
+    "ok": false,
+    "errorCount": 1,
+    "warningCount": 12,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "missing_timeline_registry",
+        "severity": "error",
+        "message": "Missing `window.__timelines` registration.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "/Users/user/Movies/00. Bahan/3. Antigravity/Video Ai/03_Projects/04_comic_history_kedai_kopi/video_project/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Register each composition timeline on `window.__timelines[compositionId]`."
+      },
+      {
+        "code": "duplicate_media_discovery_risk",
+        "severity": "warning",
+        "message": "Detected 2 matching img entries with the same source/start/duration.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "/Users/user/Movies/00. Bahan/3. Antigravity/Video Ai/03_Projects/04_comic_history_kedai_kopi/video_project/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Avoid duplicated media nodes that can be discovered twice during compilation."
+      },
+      {
+        "code": "duplicate_media_discovery_risk",
+        "severity": "warning",
+        "message": "Detected 4 matching img entries with the same source/start/duration.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "/Users/user/Movies/00. Bahan/3. Antigravity/Video Ai/03_Projects/04_comic_history_kedai_kopi/video_project/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Avoid duplicated media nodes that can be discovered twice during compilation."
+      },
+      {
+        "code": "duplicate_media_discovery_risk",
+        "severity": "warning",
+        "message": "Detected 3 matching img entries with the same source/start/duration.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "/Users/user/Movies/00. Bahan/3. Antigravity/Video Ai/03_Projects/04_comic_history_kedai_kopi/video_project/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Avoid duplicated media nodes that can be discovered twice during compilation."
+      },
+      {
+        "code": "gsap_infinite_repeat",
+        "severity": "warning",
+        "message": "GSAP tween uses `repeat: -1` (infinite), but the composition declares a finite 116.1s window. HyperFrames clips deterministic seeking and export to that explicit duration.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "/Users/user/Movies/00. Bahan/3. Antigravity/Video Ai/03_Projects/04_comic_history_kedai_kopi/video_project/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Keep the explicit finite composition `data-duration`. Use a finite repeat count only when the loop itself must end before the composition does."
+      },
+      {
+        "code": "composition_file_too_large",
+        "severity": "warning",
+        "message": "This HTML composition file has 360 lines. Smaller sub-compositions are easier to read, iterate on, and diff.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "/Users/user/Movies/00. Bahan/3. Antigravity/Video Ai/03_Projects/04_comic_history_kedai_kopi/video_project/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Split coherent scenes or layers into separate .html files under compositions/, then mount them from the parent with data-composition-src so each file stays small enough to inspect, revise, and validate independently."
+      },
+      {
+        "code": "timeline_track_too_dense",
+        "severity": "warning",
+        "message": "This HTML file has 6 timed elements. Smaller sub-compositions keep timelines easier to read, iterate on, and diff.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "/Users/user/Movies/00. Bahan/3. Antigravity/Video Ai/03_Projects/04_comic_history_kedai_kopi/video_project/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move coherent scene groups into separate .html files under compositions/ and mount them from the parent with data-composition-src so the timeline stays easier to inspect, revise, and validate."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"scene1\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#scene1",
+        "dataAttributes": {},
+        "sourceFile": "/Users/user/Movies/00. Bahan/3. Antigravity/Video Ai/03_Projects/04_comic_history_kedai_kopi/video_project/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"scene1\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"scene2\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#scene2",
+        "dataAttributes": {},
+        "sourceFile": "/Users/user/Movies/00. Bahan/3. Antigravity/Video Ai/03_Projects/04_comic_history_kedai_kopi/video_project/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"scene2\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"scene3\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#scene3",
+        "dataAttributes": {},
+        "sourceFile": "/Users/user/Movies/00. Bahan/3. Antigravity/Video Ai/03_Projects/04_comic_history_kedai_kopi/video_project/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"scene3\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"scene4\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#scene4",
+        "dataAttributes": {},
+        "sourceFile": "/Users/user/Movies/00. Bahan/3. Antigravity/Video Ai/03_Projects/04_comic_history_kedai_kopi/video_project/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"scene4\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"scene5\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#scene5",
+        "dataAttributes": {},
+        "sourceFile": "/Users/user/Movies/00. Bahan/3. Antigravity/Video Ai/03_Projects/04_comic_history_kedai_kopi/video_project/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"scene5\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"scene6\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#scene6",
+        "dataAttributes": {},
+        "sourceFile": "/Users/user/Movies/00. Bahan/3. Antigravity/Video Ai/03_Projects/04_comic_history_kedai_kopi/video_project/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"scene6\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      }
+    ],
+    "filesScanned": 1
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "layout": {
+    "ok": false,
+    "errorCount": 9,
+    "warningCount": 24,
+    "infoCount": 4,
+    "findings": [
+      {
+        "code": "text_occluded",
+        "severity": "error",
+        "time": 32.25,
+        "selector": "div.paper-shadow-flat > p:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 295.57,
+          "top": 393.4,
+          "right": 509.7,
+          "bottom": 465.75,
+          "width": 214.13,
+          "height": 72.35
+        },
+        "containerSelector": "#scene3 > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2)",
+        "text": "NOTA BIJI KOPI • ROASTERY",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.2,
+        "lifetime": {
+          "start": 29.5,
+          "end": 48.5
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 295.57,
+          "y": 393.4,
+          "width": 214.13,
+          "height": 72.35
+        },
+        "firstSeen": 32.25,
+        "lastSeen": 45.15,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          32.25,
+          45.15
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "error",
+        "time": 32.25,
+        "selector": "div.paper-shadow-flat > p:nth-of-type(2)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 302.37,
+          "top": 469.65,
+          "right": 533.13,
+          "bottom": 543.45,
+          "width": 230.77,
+          "height": 73.8
+        },
+        "containerSelector": "#scene3 > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2)",
+        "text": "Arabica 10kg ...... Rp 1.200.000",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.22,
+        "lifetime": {
+          "start": 29.5,
+          "end": 48.5
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 302.37,
+          "y": 469.65,
+          "width": 230.77,
+          "height": 73.8
+        },
+        "firstSeen": 32.25,
+        "lastSeen": 45.15,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          32.25,
+          45.15
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "error",
+        "time": 32.25,
+        "selector": "div.paper-shadow-flat > p:nth-of-type(3)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 307.6,
+          "top": 527.33,
+          "right": 562.27,
+          "bottom": 603.22,
+          "width": 254.67,
+          "height": 75.89
+        },
+        "containerSelector": "#scene3 > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2)",
+        "text": "Susu UHT Fresh .... Rp 450.000",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.28,
+        "lifetime": {
+          "start": 29.5,
+          "end": 48.5
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 307.6,
+          "y": 527.33,
+          "width": 254.67,
+          "height": 75.89
+        },
+        "firstSeen": 32.25,
+        "lastSeen": 45.15,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          32.25,
+          45.15
+        ]
+      },
+      {
+        "code": "text_box_overflow",
+        "severity": "error",
+        "time": 32.25,
+        "selector": "div.paper-shadow-flat > p:nth-of-type(4)",
+        "message": "Text extends outside its nearest visual/container box.",
+        "rect": {
+          "left": 314.14,
+          "top": 604.81,
+          "right": 537.2,
+          "bottom": 677.93,
+          "width": 223.06,
+          "height": 73.12
+        },
+        "containerSelector": "div.paper-shadow-flat",
+        "text": "STATUS: DIBAYAR MANDIRI",
+        "fixHint": "Text is 223px x 73px inside 401px x 292px and overflows by up to 31px; increase the container height to at least ~323px, or allow wrapping with max-width/fitTextFontSize.",
+        "containerRect": {
+          "left": 270.39,
+          "top": 354.94,
+          "right": 671.61,
+          "bottom": 647.06,
+          "width": 401.21,
+          "height": 292.13
+        },
+        "overflow": {
+          "bottom": 30.87
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 314.14,
+          "y": 604.81,
+          "width": 223.06,
+          "height": 73.12
+        },
+        "firstSeen": 32.25,
+        "lastSeen": 45.15,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          32.25,
+          45.15
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "error",
+        "time": 32.25,
+        "selector": "div.paper-shadow-flat > p:nth-of-type(4)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 314.14,
+          "top": 604.81,
+          "right": 537.2,
+          "bottom": 677.93,
+          "width": 223.06,
+          "height": 73.13
+        },
+        "containerSelector": "#scene3 > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2)",
+        "text": "STATUS: DIBAYAR MANDIRI",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.39,
+        "lifetime": {
+          "start": 29.5,
+          "end": 48.5
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 314.14,
+          "y": 604.81,
+          "width": 223.06,
+          "height": 73.13
+        },
+        "firstSeen": 32.25,
+        "lastSeen": 45.15,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          32.25,
+          45.15
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "error",
+        "time": 32.25,
+        "selector": "div.paper-shadow-flat > p:nth-of-type(2)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 302.37,
+          "top": 469.65,
+          "right": 533.13,
+          "bottom": 543.45,
+          "width": 230.76,
+          "height": 73.8
+        },
+        "containerSelector": "div.paper-shadow > p:nth-of-type(2)",
+        "text": "Arabica 10kg ...... Rp 1.200.000",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply. Decoration nobody needs to read can take data-layout-ignore.",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 302.37,
+          "y": 469.65,
+          "width": 230.76,
+          "height": 73.8
+        },
+        "firstSeen": 29.836,
+        "lastSeen": 47.997,
+        "occurrences": 31,
+        "heldMs": 18161,
+        "times": [
+          29.836,
+          30.484,
+          31.133,
+          31.782,
+          32.25,
+          32.43,
+          33.079,
+          33.727,
+          34.376,
+          35.025,
+          35.673,
+          36.322,
+          36.97,
+          37.619,
+          38.268,
+          38.916,
+          39.565,
+          40.213,
+          40.862,
+          41.511,
+          42.159,
+          42.808,
+          43.456,
+          44.105,
+          44.754,
+          45.15,
+          45.402,
+          46.051,
+          46.699,
+          47.348,
+          47.997
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "error",
+        "time": 32.25,
+        "selector": "div.paper-shadow-flat > p:nth-of-type(3)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 307.6,
+          "top": 527.33,
+          "right": 562.27,
+          "bottom": 603.22,
+          "width": 254.67,
+          "height": 75.89
+        },
+        "containerSelector": "div.paper-shadow > p:nth-of-type(3)",
+        "text": "Susu UHT Fresh .... Rp 450.000",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply. Decoration nobody needs to read can take data-layout-ignore.",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 307.6,
+          "y": 527.33,
+          "width": 254.67,
+          "height": 75.89
+        },
+        "firstSeen": 29.836,
+        "lastSeen": 47.997,
+        "occurrences": 31,
+        "heldMs": 18161,
+        "times": [
+          29.836,
+          30.484,
+          31.133,
+          31.782,
+          32.25,
+          32.43,
+          33.079,
+          33.727,
+          34.376,
+          35.025,
+          35.673,
+          36.322,
+          36.97,
+          37.619,
+          38.268,
+          38.916,
+          39.565,
+          40.213,
+          40.862,
+          41.511,
+          42.159,
+          42.808,
+          43.456,
+          44.105,
+          44.754,
+          45.15,
+          45.402,
+          46.051,
+          46.699,
+          47.348,
+          47.997
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "error",
+        "time": 32.25,
+        "selector": "div.paper-shadow-flat > p:nth-of-type(4)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 314.14,
+          "top": 604.81,
+          "right": 537.2,
+          "bottom": 677.93,
+          "width": 223.06,
+          "height": 73.12
+        },
+        "containerSelector": "#scene3 > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1)",
+        "text": "STATUS: DIBAYAR MANDIRI",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply. Decoration nobody needs to read can take data-layout-ignore.",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 314.14,
+          "y": 604.81,
+          "width": 223.06,
+          "height": 73.12
+        },
+        "firstSeen": 29.836,
+        "lastSeen": 47.997,
+        "occurrences": 31,
+        "heldMs": 18161,
+        "times": [
+          29.836,
+          30.484,
+          31.133,
+          31.782,
+          32.25,
+          32.43,
+          33.079,
+          33.727,
+          34.376,
+          35.025,
+          35.673,
+          36.322,
+          36.97,
+          37.619,
+          38.268,
+          38.916,
+          39.565,
+          40.213,
+          40.862,
+          41.511,
+          42.159,
+          42.808,
+          43.456,
+          44.105,
+          44.754,
+          45.15,
+          45.402,
+          46.051,
+          46.699,
+          47.348,
+          47.997
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "error",
+        "time": 70.95,
+        "selector": "#scene5 > div:nth-of-type(1) > div:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 165.84,
+          "top": 146.39,
+          "right": 588.58,
+          "bottom": 223.61,
+          "width": 422.75,
+          "height": 77.21
+        },
+        "containerSelector": "#scene5 > div:nth-of-type(1) > div:nth-of-type(2)",
+        "text": "PELANGGAN SETIA",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.15,
+        "lifetime": {
+          "start": 67,
+          "end": 87
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 165.84,
+          "y": 146.39,
+          "width": 422.75,
+          "height": 77.21
+        },
+        "firstSeen": 70.95,
+        "lastSeen": 83.85,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          70.95,
+          83.85
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "warning",
+        "time": 32.25,
+        "selector": "#scene3",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": 45,
+          "top": 45,
+          "right": 1045,
+          "bottom": 1885,
+          "width": 1000,
+          "height": 1840
+        },
+        "containerSelector": "div.comic-page",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 40,
+          "top": 40,
+          "right": 1040,
+          "bottom": 1880,
+          "width": 1000,
+          "height": 1840
+        },
+        "overflow": {
+          "right": 5,
+          "bottom": 5
+        },
+        "dataAttributes": {
+          "data-start": "29.5",
+          "data-duration": "19.0",
+          "data-track-index": "1"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 45,
+          "y": 45,
+          "width": 1000,
+          "height": 1840
+        },
+        "firstSeen": 32.25,
+        "lastSeen": 45.15,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          32.25,
+          45.15
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "warning",
+        "time": 70.95,
+        "selector": "#scene5",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": 45,
+          "top": 45,
+          "right": 1045,
+          "bottom": 1885,
+          "width": 1000,
+          "height": 1840
+        },
+        "containerSelector": "div.comic-page",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 40,
+          "top": 40,
+          "right": 1040,
+          "bottom": 1880,
+          "width": 1000,
+          "height": 1840
+        },
+        "overflow": {
+          "right": 5,
+          "bottom": 5
+        },
+        "dataAttributes": {
+          "data-start": "67.0",
+          "data-duration": "20.0",
+          "data-track-index": "1"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 45,
+          "y": 45,
+          "width": 1000,
+          "height": 1840
+        },
+        "firstSeen": 70.95,
+        "lastSeen": 83.85,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          70.95,
+          83.85
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "warning",
+        "time": 96.75,
+        "selector": "#scene6",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": 45,
+          "top": 45,
+          "right": 1045,
+          "bottom": 1885,
+          "width": 1000,
+          "height": 1840
+        },
+        "containerSelector": "div.comic-page",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 40,
+          "top": 40,
+          "right": 1040,
+          "bottom": 1880,
+          "width": 1000,
+          "height": 1840
+        },
+        "overflow": {
+          "right": 5,
+          "bottom": 5
+        },
+        "dataAttributes": {
+          "data-start": "87.0",
+          "data-duration": "29.1",
+          "data-track-index": "1"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 45,
+          "y": 45,
+          "width": 1000,
+          "height": 1840
+        },
+        "firstSeen": 96.75,
+        "lastSeen": 109.65,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          96.75,
+          109.65
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "warning",
+        "time": 96.75,
+        "selector": "#scene6 > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1)",
+        "message": "Nowrap text is wider than its container.",
+        "rect": {
+          "left": 551,
+          "top": 401,
+          "right": 914.88,
+          "bottom": 458,
+          "width": 363.88,
+          "height": 57
+        },
+        "containerSelector": "#scene6 > div:nth-of-type(1) > div:nth-of-type(2)",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 521,
+          "top": 431,
+          "right": 555,
+          "bottom": 460,
+          "width": 34,
+          "height": 29
+        },
+        "overflow": {
+          "right": 359.88
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 551,
+          "y": 401,
+          "width": 363.88,
+          "height": 57
+        },
+        "firstSeen": 96.75,
+        "lastSeen": 109.65,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          96.75,
+          109.65
+        ]
+      },
+      {
+        "code": "escaped_container",
+        "severity": "warning",
+        "time": 96.75,
+        "selector": "#scene6 > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1)",
+        "message": "Positioned element renders far outside its offset parent — its coordinates were likely computed in a different frame (canvas/viewport pixels).",
+        "rect": {
+          "left": 551,
+          "top": 401,
+          "right": 914.88,
+          "bottom": 458,
+          "width": 363.88,
+          "height": 57
+        },
+        "containerSelector": "#scene6 > div:nth-of-type(1) > div:nth-of-type(2)",
+        "text": "KEDAI KITA BERSAMA 📍",
+        "fixHint": "Compute left/top in the offset parent's frame (subtract its rect), or mark intentional placement with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 521,
+          "top": 431,
+          "right": 555,
+          "bottom": 460,
+          "width": 34,
+          "height": 29
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 551,
+          "y": 401,
+          "width": 363.88,
+          "height": 57
+        },
+        "firstSeen": 96.75,
+        "lastSeen": 109.65,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          96.75,
+          109.65
+        ]
+      },
+      {
+        "selector": "#scene1 > div:nth-of-type(1) > div:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 165.73,
+          "y": 149.35,
+          "width": 338.33,
+          "height": 71.3
+        },
+        "time": 6.45,
+        "rect": {
+          "left": 165.73,
+          "top": 149.35,
+          "right": 504.06,
+          "bottom": 220.65,
+          "width": 338.33,
+          "height": 71.3
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "KEDAI KOPI • 01",
+        "message": "<div> \"KEDAI KOPI • 01\" is outside the safe area: TikTok (top edge), Instagram Reels (top edge), YouTube Shorts (top edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 6.45,
+        "lastSeen": 6.45,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          6.45
+        ]
+      },
+      {
+        "selector": "#scene1 > div:nth-of-type(1) > div:nth-of-type(2)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 753.33,
+          "y": 158.5,
+          "width": 174.39,
+          "height": 41
+        },
+        "time": 6.45,
+        "rect": {
+          "left": 753.33,
+          "top": 158.5,
+          "right": 927.72,
+          "bottom": 199.5,
+          "width": 174.39,
+          "height": 41
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "EST. 2024",
+        "message": "<div> \"EST. 2024\" is outside the safe area: TikTok (top edge), Instagram Reels (top edge), YouTube Shorts (top edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 6.45,
+        "lastSeen": 6.45,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          6.45
+        ]
+      },
+      {
+        "selector": "#slap_p1",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 304.91,
+          "y": 1266.52,
+          "width": 595.18,
+          "height": 87.96
+        },
+        "time": 6.45,
+        "rect": {
+          "left": 304.91,
+          "top": 1266.52,
+          "right": 900.09,
+          "bottom": 1354.48,
+          "width": 595.18,
+          "height": 87.96
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "SEBUAH MIMPI KELUARGA",
+        "message": "<div> \"SEBUAH MIMPI KELUARGA\" is outside the safe area: TikTok (bottom edge), Instagram Reels (bottom edge), YouTube Shorts (bottom edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 6.45,
+        "lastSeen": 6.45,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          6.45
+        ]
+      },
+      {
+        "selector": "#cap_text_1",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 143.42,
+          "y": 1617.41,
+          "width": 803.14,
+          "height": 97.29
+        },
+        "time": 6.45,
+        "rect": {
+          "left": 143.42,
+          "top": 1617.41,
+          "right": 946.56,
+          "bottom": 1714.7,
+          "width": 803.14,
+          "height": 97.29
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "Dulu, kedai kopi ini menjual secangkir kopi... b",
+        "message": "<div> \"Dulu, kedai kopi ini menjual secangkir kopi... b\" is outside the safe area: TikTok (bottom edge), Instagram Reels (bottom edge), YouTube Shorts (bottom edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 6.45,
+        "lastSeen": 6.45,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          6.45
+        ]
+      },
+      {
+        "selector": "#scene2 > div:nth-of-type(1) > div:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 165.78,
+          "y": 147.92,
+          "width": 379.03,
+          "height": 74.16
+        },
+        "time": 19.35,
+        "rect": {
+          "left": 165.78,
+          "top": 147.92,
+          "right": 544.81,
+          "bottom": 222.08,
+          "width": 379.03,
+          "height": 74.16
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "PUKUL 05:00 PAGI",
+        "message": "<div> \"PUKUL 05:00 PAGI\" is outside the safe area: TikTok (top edge), Instagram Reels (top edge), YouTube Shorts (top edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 19.35,
+        "lastSeen": 19.35,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          19.35
+        ]
+      },
+      {
+        "selector": "#scene2 > div:nth-of-type(1) > div:nth-of-type(2)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 715.21,
+          "y": 157.5,
+          "width": 212.48,
+          "height": 43
+        },
+        "time": 19.35,
+        "rect": {
+          "left": 715.21,
+          "top": 157.5,
+          "right": 927.69,
+          "bottom": 200.5,
+          "width": 212.48,
+          "height": 43
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "PERSIAPAN",
+        "message": "<div> \"PERSIAPAN\" is outside the safe area: TikTok (top edge), Instagram Reels (top edge), YouTube Shorts (top edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 19.35,
+        "lastSeen": 19.35,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          19.35
+        ]
+      },
+      {
+        "selector": "#cap_text_2",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 146.39,
+          "y": 1617.41,
+          "width": 797.2,
+          "height": 97.29
+        },
+        "time": 19.35,
+        "rect": {
+          "left": 146.39,
+          "top": 1617.41,
+          "right": 943.59,
+          "bottom": 1714.7,
+          "width": 797.2,
+          "height": 97.29
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "Setiap pagi, sebelum kota terbangun, mempersiapk",
+        "message": "<div> \"Setiap pagi, sebelum kota terbangun, mempersiapk\" is outside the safe area: TikTok (bottom edge), Instagram Reels (bottom edge), YouTube Shorts (bottom edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 19.35,
+        "lastSeen": 19.35,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          19.35
+        ]
+      },
+      {
+        "selector": "#scene3 > div:nth-of-type(1) > div:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 165.86,
+          "y": 145.63,
+          "width": 444.63,
+          "height": 78.74
+        },
+        "time": 32.25,
+        "rect": {
+          "left": 165.86,
+          "top": 145.63,
+          "right": 610.49,
+          "bottom": 224.37,
+          "width": 444.63,
+          "height": 78.74
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "REALITAS & CERITA",
+        "message": "<div> \"REALITAS & CERITA\" is outside the safe area: TikTok (top edge), Instagram Reels (top edge), YouTube Shorts (top edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 32.25,
+        "lastSeen": 45.15,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          32.25,
+          45.15
+        ]
+      },
+      {
+        "selector": "#cap_text_3",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 134.06,
+          "y": 1617.41,
+          "width": 821.88,
+          "height": 97.29
+        },
+        "time": 32.25,
+        "rect": {
+          "left": 134.06,
+          "top": 1617.41,
+          "right": 955.94,
+          "bottom": 1714.7,
+          "width": 821.88,
+          "height": 97.29
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "Ada lelah yang tak selalu terlihat, di balik set",
+        "message": "<div> \"Ada lelah yang tak selalu terlihat, di balik set\" is outside the safe area: TikTok (bottom edge), Instagram Reels (bottom edge), YouTube Shorts (bottom edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 32.25,
+        "lastSeen": 45.15,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          32.25,
+          45.15
+        ]
+      },
+      {
+        "selector": "#scene4 > div:nth-of-type(1) > div:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 165.78,
+          "y": 147.97,
+          "width": 377.62,
+          "height": 74.06
+        },
+        "time": 58.05,
+        "rect": {
+          "left": 165.78,
+          "top": 147.97,
+          "right": 543.4,
+          "bottom": 222.03,
+          "width": 377.62,
+          "height": 74.06
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "FILOSOFI USAHA",
+        "message": "<div> \"FILOSOFI USAHA\" is outside the safe area: TikTok (top edge), Instagram Reels (top edge), YouTube Shorts (top edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 58.05,
+        "lastSeen": 58.05,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          58.05
+        ]
+      },
+      {
+        "selector": "#scene4 > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 301.53,
+          "y": 1048.18,
+          "width": 508.68,
+          "height": 70.67
+        },
+        "time": 58.05,
+        "rect": {
+          "left": 301.53,
+          "top": 1048.18,
+          "right": 810.21,
+          "bottom": 1118.85,
+          "width": 508.68,
+          "height": 70.67
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "SALING MELENGKAPI",
+        "message": "<div> \"SALING MELENGKAPI\" is outside the safe area: TikTok (right edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 58.05,
+        "lastSeen": 58.05,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          58.05
+        ]
+      },
+      {
+        "selector": "#cap_text_4",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 162.91,
+          "y": 1566.11,
+          "width": 764.17,
+          "height": 148.59
+        },
+        "time": 58.05,
+        "rect": {
+          "left": 162.91,
+          "top": 1566.11,
+          "right": 927.08,
+          "bottom": 1714.7,
+          "width": 764.17,
+          "height": 148.59
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "Bukan tentang siapa paling banyak bekerja, tapi ",
+        "message": "<div> \"Bukan tentang siapa paling banyak bekerja, tapi \" is outside the safe area: TikTok (bottom edge), Instagram Reels (bottom edge), YouTube Shorts (bottom edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 58.05,
+        "lastSeen": 58.05,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          58.05
+        ]
+      },
+      {
+        "selector": "#scene5 > div:nth-of-type(1) > div:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 165.84,
+          "y": 146.39,
+          "width": 422.74,
+          "height": 77.22
+        },
+        "time": 70.95,
+        "rect": {
+          "left": 165.84,
+          "top": 146.39,
+          "right": 588.58,
+          "bottom": 223.61,
+          "width": 422.74,
+          "height": 77.22
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "PELANGGAN SETIA",
+        "message": "<div> \"PELANGGAN SETIA\" is outside the safe area: TikTok (top edge), Instagram Reels (top edge), YouTube Shorts (top edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 70.95,
+        "lastSeen": 83.85,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          70.95,
+          83.85
+        ]
+      },
+      {
+        "selector": "#scene5 > div:nth-of-type(1) > div:nth-of-type(2)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 554.95,
+          "y": 153.3,
+          "width": 372.63,
+          "height": 51.4
+        },
+        "time": 70.95,
+        "rect": {
+          "left": 554.95,
+          "top": 153.3,
+          "right": 927.58,
+          "bottom": 204.7,
+          "width": 372.63,
+          "height": 51.4
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "SENYUM RUTINITAS",
+        "message": "<div> \"SENYUM RUTINITAS\" is outside the safe area: TikTok (top edge), Instagram Reels (top edge), YouTube Shorts (top edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 70.95,
+        "lastSeen": 83.85,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          70.95,
+          83.85
+        ]
+      },
+      {
+        "selector": "#scene5 > div:nth-of-type(1) > div:nth-of-type(5)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 338.67,
+          "y": 1167.57,
+          "width": 508.74,
+          "height": 51.86
+        },
+        "time": 70.95,
+        "rect": {
+          "left": 338.67,
+          "top": 1167.57,
+          "right": 847.41,
+          "bottom": 1219.43,
+          "width": 508.74,
+          "height": 51.86
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "KEBAHAGIAAN SEDERHANA ✨",
+        "message": "<div> \"KEBAHAGIAAN SEDERHANA ✨\" is outside the safe area: TikTok (right edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 70.95,
+        "lastSeen": 83.85,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          70.95,
+          83.85
+        ]
+      },
+      {
+        "selector": "#cap_text_5",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 179.78,
+          "y": 1617.41,
+          "width": 730.44,
+          "height": 97.29
+        },
+        "time": 70.95,
+        "rect": {
+          "left": 179.78,
+          "top": 1617.41,
+          "right": 910.22,
+          "bottom": 1714.7,
+          "width": 730.44,
+          "height": 97.29
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "Setiap kali melihat mereka kembali, ada yang sul",
+        "message": "<div> \"Setiap kali melihat mereka kembali, ada yang sul\" is outside the safe area: TikTok (bottom edge), Instagram Reels (bottom edge), YouTube Shorts (bottom edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 70.95,
+        "lastSeen": 83.85,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          70.95,
+          83.85
+        ]
+      },
+      {
+        "selector": "#scene6 > div:nth-of-type(1) > div:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 165.86,
+          "y": 145.71,
+          "width": 442.37,
+          "height": 78.58
+        },
+        "time": 96.75,
+        "rect": {
+          "left": 165.86,
+          "top": 145.71,
+          "right": 608.23,
+          "bottom": 224.29,
+          "width": 442.37,
+          "height": 78.58
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "TITIK PERJUANGAN",
+        "message": "<div> \"TITIK PERJUANGAN\" is outside the safe area: TikTok (top edge), Instagram Reels (top edge), YouTube Shorts (top edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 96.75,
+        "lastSeen": 109.65,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          96.75,
+          109.65
+        ]
+      },
+      {
+        "selector": "#scene6 > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 572,
+          "y": 414,
+          "width": 321.88,
+          "height": 33
+        },
+        "time": 96.75,
+        "rect": {
+          "left": 572,
+          "top": 414,
+          "right": 893.88,
+          "bottom": 447,
+          "width": 321.88,
+          "height": 33
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "KEDAI KITA BERSAMA 📍",
+        "message": "<div> \"KEDAI KITA BERSAMA 📍\" is outside the safe area: YouTube Shorts (right edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 96.75,
+        "lastSeen": 109.65,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          96.75,
+          109.65
+        ]
+      },
+      {
+        "selector": "#cap_text_6",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 168.72,
+          "y": 1617.41,
+          "width": 752.55,
+          "height": 97.29
+        },
+        "time": 96.75,
+        "rect": {
+          "left": 168.72,
+          "top": 1617.41,
+          "right": 921.27,
+          "bottom": 1714.7,
+          "width": 752.55,
+          "height": 97.29
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "Selama keluarga masih mau berjuang bersama, . se",
+        "message": "<div> \"Selama keluarga masih mau berjuang bersama, . se\" is outside the safe area: TikTok (bottom edge), Instagram Reels (bottom edge), YouTube Shorts (bottom edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 96.75,
+        "lastSeen": 109.65,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          96.75,
+          109.65
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 6.45,
+        "selector": "#scene1",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": 45,
+          "top": 45,
+          "right": 1045,
+          "bottom": 1885,
+          "width": 1000,
+          "height": 1840
+        },
+        "containerSelector": "div.comic-page",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 40,
+          "top": 40,
+          "right": 1040,
+          "bottom": 1880,
+          "width": 1000,
+          "height": 1840
+        },
+        "overflow": {
+          "right": 5,
+          "bottom": 5
+        },
+        "dataAttributes": {
+          "data-start": "0",
+          "data-duration": "13.0",
+          "data-track-index": "1"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 45,
+          "y": 45,
+          "width": 1000,
+          "height": 1840
+        },
+        "firstSeen": 6.45,
+        "lastSeen": 6.45,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          6.45
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 19.35,
+        "selector": "#scene2",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": 45,
+          "top": 45,
+          "right": 1045,
+          "bottom": 1885,
+          "width": 1000,
+          "height": 1840
+        },
+        "containerSelector": "div.comic-page",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 40,
+          "top": 40,
+          "right": 1040,
+          "bottom": 1880,
+          "width": 1000,
+          "height": 1840
+        },
+        "overflow": {
+          "right": 5,
+          "bottom": 5
+        },
+        "dataAttributes": {
+          "data-start": "13.0",
+          "data-duration": "16.5",
+          "data-track-index": "1"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 45,
+          "y": 45,
+          "width": 1000,
+          "height": 1840
+        },
+        "firstSeen": 19.35,
+        "lastSeen": 19.35,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          19.35
+        ]
+      },
+      {
+        "code": "escaped_container",
+        "severity": "info",
+        "time": 19.35,
+        "selector": "#scene2 > div:nth-of-type(1) > div:nth-of-type(5) > div:nth-of-type(3)",
+        "message": "Positioned element renders far outside its offset parent — its coordinates were likely computed in a different frame (canvas/viewport pixels).",
+        "rect": {
+          "left": 726,
+          "top": 726.31,
+          "right": 781,
+          "bottom": 781.31,
+          "width": 55,
+          "height": 55
+        },
+        "containerSelector": "#scene2 > div:nth-of-type(1) > div:nth-of-type(5)",
+        "text": "",
+        "fixHint": "Compute left/top in the offset parent's frame (subtract its rect), or mark intentional placement with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 681,
+          "top": 871,
+          "right": 821,
+          "bottom": 1055.3,
+          "width": 140,
+          "height": 184.3
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 726,
+          "y": 726.31,
+          "width": 55,
+          "height": 55
+        },
+        "firstSeen": 19.35,
+        "lastSeen": 19.35,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          19.35
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 58.05,
+        "selector": "#scene4",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": 45,
+          "top": 45,
+          "right": 1045,
+          "bottom": 1885,
+          "width": 1000,
+          "height": 1840
+        },
+        "containerSelector": "div.comic-page",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 40,
+          "top": 40,
+          "right": 1040,
+          "bottom": 1880,
+          "width": 1000,
+          "height": 1840
+        },
+        "overflow": {
+          "right": 5,
+          "bottom": 5
+        },
+        "dataAttributes": {
+          "data-start": "48.5",
+          "data-duration": "18.5",
+          "data-track-index": "1"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 45,
+          "y": 45,
+          "width": 1000,
+          "height": 1840
+        },
+        "firstSeen": 58.05,
+        "lastSeen": 58.05,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          58.05
+        ]
+      }
+    ],
+    "duration": 116.1,
+    "samples": [
+      6.45,
+      19.35,
+      32.25,
+      45.15,
+      58.05,
+      70.95,
+      83.85,
+      96.75,
+      109.65
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 37,
+    "truncated": false,
+    "faceCheck": {
+      "ran": true,
+      "candidates": 0,
+      "faces": 0
+    }
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": false,
+    "samples": 0
+  },
+  "contrast": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "samples": [
+      6.45,
+      32.25,
+      58.05,
+      83.85,
+      109.65
+    ],
+    "checked": 32,
+    "passed": 32
+  },
+  "craft": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 8,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "dead_stretch",
+        "severity": "warning",
+        "message": "Nothing on screen changes for 3.49 s (16.86–20.35 s): start the next move within 3 s, or put data-hold on the element whose stillness is deliberate; see references/motion.md.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 16.863,
+        "seconds": 3.488,
+        "floorSeconds": 3,
+        "until": 20.351
+      },
+      {
+        "code": "dead_stretch",
+        "severity": "warning",
+        "message": "Nothing on screen changes for 3.88 s (29.66–33.53 s): start the next move within 3 s, or put data-hold on the element whose stillness is deliberate; see references/motion.md.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 29.655,
+        "seconds": 3.876,
+        "floorSeconds": 3,
+        "until": 33.531
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 9 text elements stay under it for 0.5 s or more, the smallest \"NOTA BIJI KOPI • ROASTERY\" at 24 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "NOTA BIJI KOPI • ROASTERY",
+        "selector": "div.paper-shadow-flat > p:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 295.57,
+          "y": 393.4,
+          "width": 214.13,
+          "height": 72.35
+        },
+        "time": 29.655,
+        "times": [
+          29.655,
+          29.655,
+          29.655,
+          29.655,
+          29.655,
+          29.655,
+          29.655,
+          29.655,
+          87.027
+        ],
+        "fontPx": 24,
+        "floorPx": 28,
+        "seconds": 18.995,
+        "elements": [
+          {
+            "selector": "div.paper-shadow-flat > p:nth-of-type(1)",
+            "text": "NOTA BIJI KOPI • ROASTERY",
+            "fontPx": 24,
+            "time": 29.655,
+            "seconds": 18.995
+          },
+          {
+            "selector": "div.paper-shadow-flat > p:nth-of-type(2)",
+            "text": "Arabica 10kg ...... Rp 1.200.000",
+            "fontPx": 24,
+            "time": 29.655,
+            "seconds": 18.995
+          },
+          {
+            "selector": "div.paper-shadow-flat > p:nth-of-type(3)",
+            "text": "Susu UHT Fresh .... Rp 450.000",
+            "fontPx": 24,
+            "time": 29.655,
+            "seconds": 18.995
+          },
+          {
+            "selector": "div.paper-shadow-flat > p:nth-of-type(4)",
+            "text": "STATUS: DIBAYAR MANDIRI",
+            "fontPx": 24,
+            "time": 29.655,
+            "seconds": 18.995
+          },
+          {
+            "selector": "div.paper-shadow > p:nth-of-type(1)",
+            "text": "SEWA TEMPAT & LISTRIK",
+            "fontPx": 24,
+            "time": 29.655,
+            "seconds": 18.995
+          },
+          {
+            "selector": "div.paper-shadow > p:nth-of-type(2)",
+            "text": "Token Listrik 900W ... LUNAS",
+            "fontPx": 24,
+            "time": 29.655,
+            "seconds": 18.995
+          },
+          {
+            "selector": "div.paper-shadow > p:nth-of-type(3)",
+            "text": "Air Bersih Galon ..... LUNAS",
+            "fontPx": 24,
+            "time": 29.655,
+            "seconds": 18.995
+          },
+          {
+            "selector": "#scene3 > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1)",
+            "text": "KERJA KERAS",
+            "fontPx": 24,
+            "time": 29.655,
+            "seconds": 18.995
+          },
+          {
+            "selector": "#scene6 > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1)",
+            "text": "KEDAI KITA BERSAMA 📍",
+            "fontPx": 26,
+            "time": 87.027,
+            "seconds": 29.073
+          }
+        ]
+      },
+      {
+        "code": "dead_stretch",
+        "severity": "warning",
+        "message": "Nothing on screen changes for 10.47 s (33.73–44.19 s): start the next move within 3 s, or put data-hold on the element whose stillness is deliberate; see references/motion.md.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 33.725,
+        "seconds": 10.467,
+        "floorSeconds": 3,
+        "until": 44.192
+      },
+      {
+        "code": "dead_stretch",
+        "severity": "warning",
+        "message": "Nothing on screen changes for 18.22 s (48.65–66.87 s): start the next move within 3 s, or put data-hold on the element whose stillness is deliberate; see references/motion.md.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 48.65,
+        "seconds": 18.219,
+        "floorSeconds": 3,
+        "until": 66.869
+      },
+      {
+        "code": "dead_stretch",
+        "severity": "warning",
+        "message": "Nothing on screen changes for 6.20 s (69.78–75.98 s): start the next move within 3 s, or put data-hold on the element whose stillness is deliberate; see references/motion.md.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 69.776,
+        "seconds": 6.203,
+        "floorSeconds": 3,
+        "until": 75.979
+      },
+      {
+        "code": "dead_stretch",
+        "severity": "warning",
+        "message": "Nothing on screen changes for 4.65 s (82.18–86.83 s): start the next move within 3 s, or put data-hold on the element whose stillness is deliberate; see references/motion.md.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 82.181,
+        "seconds": 4.652,
+        "floorSeconds": 3,
+        "until": 86.833
+      },
+      {
+        "code": "dead_stretch",
+        "severity": "warning",
+        "message": "Nothing on screen changes for 11.63 s (87.03–98.66 s): start the next move within 3 s, or put data-hold on the element whose stillness is deliberate; see references/motion.md.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 87.027,
+        "seconds": 11.629,
+        "floorSeconds": 3,
+        "until": 98.656
+      }
+    ],
+    "enabled": true,
+    "step": 0.19400000000000084,
+    "samples": 599
+  },
+  "audio": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "hdr": {
+    "autoPromotion": null,
+    "inspection": "available"
+  },
+  "snapshots": {
+    "enabled": false,
+    "files": [],
+    "times": [],
+    "findingFiles": []
+  }
+}

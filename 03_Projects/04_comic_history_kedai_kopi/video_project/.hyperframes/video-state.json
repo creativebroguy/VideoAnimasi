@@ -1,0 +1,253 @@
+{
+  "version": 1,
+  "historyId": "ed0fa033-74ee-49f5-82a0-80c784995b67",
+  "currentRevision": "d0c5e87b-4b8f-4627-b76a-e8963807ef1f",
+  "pendingChanges": false,
+  "files": {
+    "assets/barista_arm_l.png": {
+      "hash": "701ef78f22dfe5d438cd0986633ca94e77856c720550348f31c13e3f3d1cb8cb",
+      "content": "/Users/user/.cache/hyperframes/history/ed0fa033-74ee-49f5-82a0-80c784995b67/blobs/70/701ef78f22dfe5d438cd0986633ca94e77856c720550348f31c13e3f3d1cb8cb"
+    },
+    "assets/barista_arm_r.png": {
+      "hash": "ed375850ed798c1ab3922b53e1d0b91efd4b7cc976e3ffb2386e8d77b11dde2d",
+      "content": "/Users/user/.cache/hyperframes/history/ed0fa033-74ee-49f5-82a0-80c784995b67/blobs/ed/ed375850ed798c1ab3922b53e1d0b91efd4b7cc976e3ffb2386e8d77b11dde2d"
+    },
+    "assets/barista_cup.png": {
+      "hash": "8800d5c42977e3f313e71061e6cfaef593fc6ad2edeb0dc18918ed82ca6667b5",
+      "content": "/Users/user/.cache/hyperframes/history/ed0fa033-74ee-49f5-82a0-80c784995b67/blobs/88/8800d5c42977e3f313e71061e6cfaef593fc6ad2edeb0dc18918ed82ca6667b5"
+    },
+    "assets/barista_head.png": {
+      "hash": "8ca94cefee267a82812789313d62af74c093edcb23fd9195fc2d19af6047eb79",
+      "content": "/Users/user/.cache/hyperframes/history/ed0fa033-74ee-49f5-82a0-80c784995b67/blobs/8c/8ca94cefee267a82812789313d62af74c093edcb23fd9195fc2d19af6047eb79"
+    },
+    "assets/barista_leg_l.png": {
+      "hash": "05a48098907312842c35c2700bce6081f459c82af8f252e0fb5ee990fe28ffe6",
+      "content": "/Users/user/.cache/hyperframes/history/ed0fa033-74ee-49f5-82a0-80c784995b67/blobs/05/05a48098907312842c35c2700bce6081f459c82af8f252e0fb5ee990fe28ffe6"
+    },
+    "assets/barista_leg_r.png": {
+      "hash": "7037aed3c6180c97b88c675d65388c772229e46d5080a41ee0a3fcc7bc2cd59d",
+      "content": "/Users/user/.cache/hyperframes/history/ed0fa033-74ee-49f5-82a0-80c784995b67/blobs/70/7037aed3c6180c97b88c675d65388c772229e46d5080a41ee0a3fcc7bc2cd59d"
+    },
+    "assets/barista_torso.png": {
+      "hash": "8f7dea23a134baf71725e6f21888011528b8f5a4c2cc503c2c052b0d101d8f54",
+      "content": "/Users/user/.cache/hyperframes/history/ed0fa033-74ee-49f5-82a0-80c784995b67/blobs/8f/8f7dea23a134baf71725e6f21888011528b8f5a4c2cc503c2c052b0d101d8f54"
+    },
+    "assets/blueprint.jpg": {
+      "hash": "85d75703626febcfeb992aea1a65f0c8a974ce4a675f0ab82fc508e13760eea7",
+      "content": "/Users/user/.cache/hyperframes/history/ed0fa033-74ee-49f5-82a0-80c784995b67/blobs/85/85d75703626febcfeb992aea1a65f0c8a974ce4a675f0ab82fc508e13760eea7"
+    },
+    "assets/cust_arm.png": {
+      "hash": "86877a0b62d5e8d555fd2b86934a3fce3bc80ca3c41d71135f93174ff3dedfbd",
+      "content": "/Users/user/.cache/hyperframes/history/ed0fa033-74ee-49f5-82a0-80c784995b67/blobs/86/86877a0b62d5e8d555fd2b86934a3fce3bc80ca3c41d71135f93174ff3dedfbd"
+    },
+    "assets/cust_head.png": {
+      "hash": "6541755579956d04b56d39d02fe70647366ff98201691b1a941dec192080e3eb",
+      "content": "/Users/user/.cache/hyperframes/history/ed0fa033-74ee-49f5-82a0-80c784995b67/blobs/65/6541755579956d04b56d39d02fe70647366ff98201691b1a941dec192080e3eb"
+    },
+    "assets/cust_torso.png": {
+      "hash": "055dff3a13ec86ccb4f808d0ca59481104ab6d60b2bcbaca633b82f50aa371e1",
+      "content": "/Users/user/.cache/hyperframes/history/ed0fa033-74ee-49f5-82a0-80c784995b67/blobs/05/055dff3a13ec86ccb4f808d0ca59481104ab6d60b2bcbaca633b82f50aa371e1"
+    },
+    "assets/espresso.png": {
+      "hash": "2a90e933c68006e5b6ebdcecdfda00d8a6bee3f2eb0d61f2327f9e6a3590848c",
+      "content": "/Users/user/.cache/hyperframes/history/ed0fa033-74ee-49f5-82a0-80c784995b67/blobs/2a/2a90e933c68006e5b6ebdcecdfda00d8a6bee3f2eb0d61f2327f9e6a3590848c"
+    },
+    "assets/grinder.png": {
+      "hash": "b04932ef4279f3f4f636cb53e2c7b06afed3891b4cae9ee2f465542a9561ba34",
+      "content": "/Users/user/.cache/hyperframes/history/ed0fa033-74ee-49f5-82a0-80c784995b67/blobs/b0/b04932ef4279f3f4f636cb53e2c7b06afed3891b4cae9ee2f465542a9561ba34"
+    },
+    "assets/hot_cup.png": {
+      "hash": "1f78694b127983b1564c199f73315b9912d41dfeb5908a96f3352a995f1318ce",
+      "content": "/Users/user/.cache/hyperframes/history/ed0fa033-74ee-49f5-82a0-80c784995b67/blobs/1f/1f78694b127983b1564c199f73315b9912d41dfeb5908a96f3352a995f1318ce"
+    },
+    "assets/mama_arm.png": {
+      "hash": "e21150d8bcc216b18ea041a8b8a421f3deb3283fbf41002adb8850ef14f221d8",
+      "content": "/Users/user/.cache/hyperframes/history/ed0fa033-74ee-49f5-82a0-80c784995b67/blobs/e2/e21150d8bcc216b18ea041a8b8a421f3deb3283fbf41002adb8850ef14f221d8"
+    },
+    "assets/mama_head.png": {
+      "hash": "cb3b8187797f996647c1d77b0392bc54c8b8d5fa6adfe888cf89ca48e76de2d7",
+      "content": "/Users/user/.cache/hyperframes/history/ed0fa033-74ee-49f5-82a0-80c784995b67/blobs/cb/cb3b8187797f996647c1d77b0392bc54c8b8d5fa6adfe888cf89ca48e76de2d7"
+    },
+    "assets/mama_torso.png": {
+      "hash": "8ef1d14a7c7419a0e538f8728bda5eaebfe04ead937254e1b04f3397a395b2d0",
+      "content": "/Users/user/.cache/hyperframes/history/ed0fa033-74ee-49f5-82a0-80c784995b67/blobs/8e/8ef1d14a7c7419a0e538f8728bda5eaebfe04ead937254e1b04f3397a395b2d0"
+    },
+    "assets/sack.png": {
+      "hash": "8fa1ea0ad36ad93c4bd1abe0a63addae401b89359cdb9eaf6ade6b1455b14923",
+      "content": "/Users/user/.cache/hyperframes/history/ed0fa033-74ee-49f5-82a0-80c784995b67/blobs/8f/8fa1ea0ad36ad93c4bd1abe0a63addae401b89359cdb9eaf6ade6b1455b14923"
+    },
+    "fonts/IMFeENit28P.ttf": {
+      "hash": "47cd75dce54b1f2e0831359d22d5e688f519d68ae45706b664fd310fd0e3ccf7",
+      "content": "/Users/user/.cache/hyperframes/history/ed0fa033-74ee-49f5-82a0-80c784995b67/blobs/47/47cd75dce54b1f2e0831359d22d5e688f519d68ae45706b664fd310fd0e3ccf7"
+    },
+    "fonts/IMFeENrm28P.ttf": {
+      "hash": "fe9705bbde51af802719246d4608d08d37bde956ab99d9a590da996a5221a24c",
+      "content": "/Users/user/.cache/hyperframes/history/ed0fa033-74ee-49f5-82a0-80c784995b67/blobs/fe/fe9705bbde51af802719246d4608d08d37bde956ab99d9a590da996a5221a24c"
+    },
+    "fonts/IMFeENsc28P.ttf": {
+      "hash": "102324fb5434bb5da7963533426b0ad44c85bbc9e7755067535c9d11464a176b",
+      "content": "/Users/user/.cache/hyperframes/history/ed0fa033-74ee-49f5-82a0-80c784995b67/blobs/10/102324fb5434bb5da7963533426b0ad44c85bbc9e7755067535c9d11464a176b"
+    },
+    "fonts/LilitaOne-Regular.ttf": {
+      "hash": "f5b641c45c69d772ee4eda687bc9fda411d5cad6b0b45371491da4580cbc8d59",
+      "content": "/Users/user/.cache/hyperframes/history/ed0fa033-74ee-49f5-82a0-80c784995b67/blobs/f5/f5b641c45c69d772ee4eda687bc9fda411d5cad6b0b45371491da4580cbc8d59"
+    },
+    "fonts/OldStandard-Bold.ttf": {
+      "hash": "7d831e9d799ad23ee98e889381a9db2a283b2dac7f228dd5c06071decb9c54db",
+      "content": "/Users/user/.cache/hyperframes/history/ed0fa033-74ee-49f5-82a0-80c784995b67/blobs/7d/7d831e9d799ad23ee98e889381a9db2a283b2dac7f228dd5c06071decb9c54db"
+    },
+    "fonts/OldStandard-Italic.ttf": {
+      "hash": "4b9522f4711317fc06e2413a58b4662c249cb707df193d682b9d640e365ef564",
+      "content": "/Users/user/.cache/hyperframes/history/ed0fa033-74ee-49f5-82a0-80c784995b67/blobs/4b/4b9522f4711317fc06e2413a58b4662c249cb707df193d682b9d640e365ef564"
+    },
+    "fonts/OldStandard-Regular.ttf": {
+      "hash": "42717a1280b523a506ca2b0285cca380e77fe214b1f6e3d75a8b925005f19eac",
+      "content": "/Users/user/.cache/hyperframes/history/ed0fa033-74ee-49f5-82a0-80c784995b67/blobs/42/42717a1280b523a506ca2b0285cca380e77fe214b1f6e3d75a8b925005f19eac"
+    },
+    "hyperframes.json": {
+      "hash": "fbc1de2e67136389d224c85bcd3b9cfd9ed344dd72c7ebee8bf4201e26fc5bd5",
+      "content": "/Users/user/.cache/hyperframes/history/ed0fa033-74ee-49f5-82a0-80c784995b67/blobs/fb/fbc1de2e67136389d224c85bcd3b9cfd9ed344dd72c7ebee8bf4201e26fc5bd5"
+    },
+    "index.html": {
+      "hash": "3019007476c5015bac4465c37d122290ff83aa04a8a059be7aff1f83d65f73d5",
+      "content": "/Users/user/.cache/hyperframes/history/ed0fa033-74ee-49f5-82a0-80c784995b67/blobs/30/3019007476c5015bac4465c37d122290ff83aa04a8a059be7aff1f83d65f73d5"
+    },
+    "audio.wav": {
+      "hash": "eb25c6112993c4f500e48c5a131ebdb4dafd3668d051da9c865c34966597970c",
+      "content": "/Users/user/.cache/hyperframes/history/ed0fa033-74ee-49f5-82a0-80c784995b67/blobs/eb/eb25c6112993c4f500e48c5a131ebdb4dafd3668d051da9c865c34966597970c"
+    }
+  },
+  "revisions": {
+    "4d662ed0-ba43-4a3b-a1b5-c3d5631cb33a": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1795723331963,
+      "endedAt": 1795723331964,
+      "files": {
+        "index.html": {
+          "before": "/Users/user/.cache/hyperframes/history/ed0fa033-74ee-49f5-82a0-80c784995b67/blobs/b1/b10247277120a19667eac51b6e3f20d1278a5c8bfe189a6e5646b29e88c9bf20",
+          "after": "/Users/user/.cache/hyperframes/history/ed0fa033-74ee-49f5-82a0-80c784995b67/blobs/c0/c04e53c84c59188a1d80915d1846fc2a5836674b06d214abecf73ca3cf757e0b"
+        }
+      }
+    },
+    "d0c5e87b-4b8f-4627-b76a-e8963807ef1f": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1795723380093,
+      "endedAt": 1795723380094,
+      "files": {
+        "index.html": {
+          "before": "/Users/user/.cache/hyperframes/history/ed0fa033-74ee-49f5-82a0-80c784995b67/blobs/c0/c04e53c84c59188a1d80915d1846fc2a5836674b06d214abecf73ca3cf757e0b",
+          "after": "/Users/user/.cache/hyperframes/history/ed0fa033-74ee-49f5-82a0-80c784995b67/blobs/30/3019007476c5015bac4465c37d122290ff83aa04a8a059be7aff1f83d65f73d5"
+        }
+      }
+    }
+  },
+  "checks": {
+    "latest": {
+      "revision": null,
+      "id": "3ee39e03-176b-4a1f-b7f8-177973815c42"
+    },
+    "revisions": {
+      "4d662ed0-ba43-4a3b-a1b5-c3d5631cb33a": [
+        {
+          "id": "4661bc02-7a45-4da8-96c2-f75c6d9519f0",
+          "scope": "project",
+          "metadata": {
+            "ok": false,
+            "browserSkipped": false,
+            "options": {
+              "samples": 9,
+              "atTransitions": false,
+              "maxIssues": 80,
+              "collapseStatic": true,
+              "tolerance": 2,
+              "timeout": 45000,
+              "cache": true,
+              "contrast": true,
+              "craft": true,
+              "strict": false,
+              "snapshots": false,
+              "safeZones": [
+                "tiktok",
+                "reels",
+                "shorts"
+              ],
+              "browserGpuMode": "auto",
+              "includeUnmounted": false
+            }
+          },
+          "createdAt": 1795723352824,
+          "contentHash": "95014e9e9b970a415a84e7fda5badec134bc2bff4b03df3a16150dea965cb233",
+          "revision": "4d662ed0-ba43-4a3b-a1b5-c3d5631cb33a",
+          "inputFingerprint": "fdcb65a40545a6814baad9bd2018b6b5e14cb3da8dbac7a27bccbc154100f01a",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision",
+          "status": "cleaned",
+          "cleanedAfterRender": "0acdfe0c-c760-4721-bc5a-f5ef981080dd"
+        }
+      ]
+    },
+    "unversioned": [
+      {
+        "id": "3ee39e03-176b-4a1f-b7f8-177973815c42",
+        "scope": "project",
+        "report": "/Users/user/Movies/00. Bahan/3. Antigravity/Video Ai/03_Projects/04_comic_history_kedai_kopi/video_project/.hyperframes/artifacts/checks/3ee39e03-176b-4a1f-b7f8-177973815c42.json",
+        "metadata": {
+          "ok": false,
+          "browserSkipped": false,
+          "options": {
+            "samples": 9,
+            "atTransitions": false,
+            "maxIssues": 80,
+            "collapseStatic": true,
+            "tolerance": 2,
+            "timeout": 45000,
+            "cache": true,
+            "contrast": true,
+            "craft": true,
+            "strict": false,
+            "snapshots": false,
+            "safeZones": [
+              "tiktok",
+              "reels",
+              "shorts"
+            ],
+            "browserGpuMode": "auto",
+            "includeUnmounted": false
+          }
+        },
+        "createdAt": 1795723253925,
+        "contentHash": "3ddc9c26df66e38e97de4e3ceb5480d506c0815edfe656b968984c5b326789a0",
+        "revision": null,
+        "inputFingerprint": "9f44f404b2f05dd35b1b288254dfbc410347283e90bc3cb6bcce6af737d5c6cb",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      }
+    ]
+  },
+  "snapshots": {
+    "latest": null,
+    "revisions": {},
+    "unversioned": []
+  },
+  "renders": {
+    "latest": {
+      "id": "0acdfe0c-c760-4721-bc5a-f5ef981080dd",
+      "completedAt": 1795723563121,
+      "output": "/Users/user/Movies/00. Bahan/3. Antigravity/Video Ai/03_Projects/04_comic_history_kedai_kopi/kedai_kopi_keluarga.mp4",
+      "status": "completed",
+      "revision": "d0c5e87b-4b8f-4627-b76a-e8963807ef1f"
+    },
+    "retainedRevisions": [
+      "d0c5e87b-4b8f-4627-b76a-e8963807ef1f"
+    ]
+  },
+  "pendingArtifactCleanup": []
+}
