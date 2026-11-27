@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=1080, height=1920" />
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
     <style>
+      @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700;800;900&family=Special+Elite&display=swap');
       @font-face {
         font-family: 'IM Fell English SC';
         src: url('fonts/IMFeENsc28P.ttf') format('truetype');
@@ -21,8 +22,6 @@
         font-weight: bold;
         font-display: block;
       }
-      @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700;800;900&family=Special+Elite&display=swap');
-
       * {
         margin: 0;
         padding: 0;
@@ -227,13 +226,6 @@
             LINEN & WOL KUNO
           </div>
         </div>
-
-        <!-- Caption 1 -->
-        <div class="caption-card">
-          <div class="caption-text">
-            Pernah kepikiran nggak, <span class="highlight-ochre">sejak kapan</span> manusia mulai menggunakan handuk?
-          </div>
-        </div>
       </div>
 
       <!-- ================= SCENE 2: TITIK BALIK DI BURSA ABAD KE-17 (13.5s - 29.0s) ================= -->
@@ -269,13 +261,6 @@
         <div id="stamp_s2" class="paper-cutout" style="position: absolute; right: 120px; bottom: 420px; width: 220px; z-index: 30; transform: rotate(-8deg);">
           <img src="assets/bursa_stamp.png" style="width: 220px;" alt="Stempel Bursa" />
         </div>
-
-        <!-- Caption 2 -->
-        <div class="caption-card">
-          <div class="caption-text">
-            Sejarah handuk erat kaitannya dengan <span class="highlight-teal">Bursa, Turki</span>. Pada abad ke-17, Ottoman menciptakan tenunan <span class="highlight-ochre">Pestemal</span>.
-          </div>
-        </div>
       </div>
 
       <!-- ================= SCENE 3: REVOLUSI KATUN ABAD KE-19 (29.0s - 39.3s) ================= -->
@@ -304,13 +289,6 @@
             DAYA SERAP TINGGI
           </div>
         </div>
-
-        <!-- Caption 3 -->
-        <div class="caption-card">
-          <div class="caption-text">
-            Pada abad ke-19, handuk katun bertekstur tebal <span class="highlight-teal">dengan daya serap tinggi</span> mulai populer ke seluruh dunia.
-          </div>
-        </div>
       </div>
 
       <!-- ================= SCENE 4: PENYEBARAN GLOBAL & RATUSAN TAHUN (39.3s - 52.0s) ================= -->
@@ -337,13 +315,6 @@
           <img src="assets/typewriter_ribbon.png" style="width: 480px;" alt="Pita Mesin Tik" />
           <div style="position: absolute; left: 50px; top: 38px; font-family: 'Special Elite', monospace; font-size: 34px; font-weight: bold; color: #221c17;">
             SEJARAH RATUSAN TAHUN
-          </div>
-        </div>
-
-        <!-- Caption 4 -->
-        <div class="caption-card">
-          <div class="caption-text">
-            Benda yang kita anggap sederhana ini, ternyata punya <span class="highlight-ochre">sejarah panjang selama ratusan tahun</span>.
           </div>
         </div>
       </div>
@@ -384,15 +355,10 @@
             </div>
           </div>
         </div>
-
-        <!-- Caption 5 -->
-        <div class="caption-card">
-          <div class="caption-text">
-            Ingatlah, handuk punya perjalanan sejarah yang <span class="highlight-ochre">nggak sesingkat</span> waktu kita menggunakannya.
-          </div>
-        </div>
       </div>
 
+      <!-- One caption slip, text swapped per voice cue -->
+      <div class="caption-card"><div id="cap" class="caption-text"></div></div>
     </div>
 
     <!-- GSAP Master Animation Sync (Lemo-Opuscar & HyperFrames Contract) -->
@@ -441,9 +407,33 @@
       // Lemo-Opuscar native engine contract
       window.DUR = 60.71;
       window.READY = true;
+      // Scene windows and caption cues aligned to pauses detected in the VO (ffmpeg silencedetect).
+      const SCENES = [["scene1", 0], ["scene2", 13.8], ["scene3", 29.3], ["scene4", 39.5], ["scene5", 52.3]];
+      const CUES = [
+        [0, 'Pernah kepikiran nggak, <span class="highlight-ochre">sejak kapan</span> manusia mulai menggunakan handuk?'],
+        [4.2, 'Ternyata, jauh sebelum handuk modern ditemukan,'],
+        [7.4, 'manusia sudah punya kebiasaan mengeringkan tubuh menggunakan berbagai bahan, seperti <span class="highlight-teal">kain linen dan wol</span>.'],
+        [13.8, 'Namun, sejarah handuk yang kita kenal sekarang erat kaitannya dengan sebuah daerah di Turki bernama <span class="highlight-teal">Bursa</span>.'],
+        [20.3, 'Pada <span class="highlight-ochre">abad ke-17</span>, masyarakat Ottoman mulai mengembangkan kain tenun khusus'],
+        [24.7, 'yang disebut <span class="highlight-ochre">pestemal</span>, yaitu kain yang digunakan untuk mengeringkan tubuh setelah mandi.'],
+        [29.3, 'Seiring berjalannya waktu, teknik pembuatan kain ini semakin berkembang.'],
+        [33.5, 'Pada <span class="highlight-ochre">abad ke-19</span>, handuk berbahan katun dengan tekstur tebal dan <span class="highlight-teal">daya serap tinggi</span> mulai populer.'],
+        [39.5, 'Dari Turki, penggunaan handuk kemudian <span class="highlight-teal">menyebar ke berbagai negara</span> dan menjadi bagian penting dalam kehidupan sehari-hari.'],
+        [45.9, 'Menariknya, benda yang sekarang kita anggap sederhana ini ternyata punya <span class="highlight-ochre">sejarah panjang selama ratusan tahun</span>.'],
+        [52.3, 'Jadi, lain kali saat kamu mengeringkan badan setelah mandi,'],
+        [55.6, 'ingatlah bahwa handuk punya perjalanan sejarah yang <span class="highlight-ochre">nggak sesingkat</span> waktu kita menggunakannya.'],
+      ];
+      const last = (list, t) => list.filter(([, s]) => s <= t).pop() || list[0];
+      const lastCue = (t) => CUES.filter(([s]) => s <= t).pop();
       window.render = function(t) {
-        tl.seek(t);
+        tl.seek(Math.floor(t * 12) / 12); // paper pieces move on twos (12 drawings/s)
+        const cur = last(SCENES, t)[0];
+        SCENES.forEach(([id]) => { document.getElementById(id).style.display = id === cur ? "block" : "none"; });
+        const cue = lastCue(t)[1];
+        const cap = document.getElementById("cap");
+        if (cap.innerHTML !== cue) cap.innerHTML = cue;
       };
+      window.render(0);
     </script>
   </body>
 </html>
