@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="id" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+    <style>
+      @font-face {
+        font-family: 'IM Fell English SC';
+        src: url('fonts/IMFeENsc28P.ttf') format('truetype');
+        font-display: block;
+      }
+      @font-face {
+        font-family: 'Lilita One';
+        src: url('fonts/LilitaOne-Regular.ttf') format('truetype');
+        font-display: block;
+      }
+      @font-face {
+        font-family: 'Old Standard TT';
+        src: url('fonts/OldStandard-Bold.ttf') format('truetype');
+        font-weight: bold;
+        font-display: block;
+      }
+      @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700;800;900&family=Special+Elite&display=swap');
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html, body {
+        margin: 0;
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        background: #221c17;
+        font-family: 'Barlow Semi Condensed', sans-serif;
+      }
+
+      /* Old Paper Table Surface (#ECDFC2) */
+      #root {
+        position: relative;
+        width: 1080px;
+        height: 1920px;
+        background: #ecdfc2;
+        background-image: 
+          repeating-radial-gradient(circle at 50% 50%, rgba(34,28,23,0.03) 0, rgba(34,28,23,0.03) 2px, transparent 2px, transparent 10px),
+          radial-gradient(ellipse at 50% 50%, rgba(246,238,219,0.7) 0%, rgba(200,185,155,0.95) 100%);
+        overflow: hidden;
+      }
+
+      /* Torn Paper Edges & Layers */
+      .torn-teal-bg {
+        position: absolute;
+        top: 80px;
+        left: 40px;
+        width: 1000px;
+        height: 1400px;
+        background: #2f7f7a;
+        clip-path: polygon(2% 0%, 98% 1%, 100% 97%, 96% 100%, 3% 99%, 0% 5%);
+        box-shadow: 0 16px 40px rgba(34,28,23,0.45);
+        border: 4px solid #f6eedb;
+      }
+
+      .torn-ochre-strip {
+        position: absolute;
+        background: #c65f3a;
+        border: 3px solid #f6eedb;
+        box-shadow: 6px 8px 16px rgba(34,28,23,0.35);
+      }
+
+      .mustard-sun {
+        position: absolute;
+        width: 280px;
+        height: 280px;
+        background: #e1ab3b;
+        border-radius: 50%;
+        border: 4px solid #f6eedb;
+        box-shadow: 4px 6px 20px rgba(34,28,23,0.3);
+      }
+
+      /* Procedural Paper Fibres Overlay */
+      .paper-overlay {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background-image: 
+          repeating-radial-gradient(circle at 20% 30%, rgba(34,28,23,0.02) 0, rgba(34,28,23,0.02) 1px, transparent 1px, transparent 6px),
+          repeating-radial-gradient(circle at 80% 70%, rgba(255,255,255,0.04) 0, rgba(255,255,255,0.04) 1px, transparent 1px, transparent 8px);
+        z-index: 100;
+      }
+
+      /* Clip wrapper */
+      .clip {
+        position: absolute;
+        inset: 0;
+        width: 1080px;
+        height: 1920px;
+      }
+
+      /* Cutout drop shadow with paper thickness */
+      .paper-cutout {
+        filter: drop-shadow(8px 16px 14px rgba(34,28,23,0.5));
+      }
+      .paper-cutout-high {
+        filter: drop-shadow(16px 32px 28px rgba(34,28,23,0.45));
+      }
+      .paper-cutout-flat {
+        filter: drop-shadow(4px 6px 4px rgba(34,28,23,0.4));
+      }
+
+      /* Typewriter Label Ribbon / Slip */
+      .typewriter-slip {
+        position: absolute;
+        background: #fdfaf2;
+        border: 3px solid #221c17;
+        padding: 8px 24px;
+        font-family: 'Special Elite', 'Old Standard TT', monospace;
+        font-size: 32px;
+        font-weight: bold;
+        color: #221c17;
+        box-shadow: 4px 6px 0px rgba(34,28,23,0.35);
+        z-index: 40;
+      }
+
+      .red-badge {
+        position: absolute;
+        background: #c65f3a;
+        color: #ffffff;
+        border: 3px solid #221c17;
+        padding: 8px 20px;
+        font-family: 'Lilita One', cursive;
+        font-size: 30px;
+        letter-spacing: 2px;
+        box-shadow: 4px 6px 0px rgba(34,28,23,0.4);
+        z-index: 45;
+      }
+
+      /* Subtitle Caption Card (Typed Paper Slip at Bottom Safe Zone) */
+      .caption-card {
+        position: absolute;
+        bottom: 140px;
+        left: 60px;
+        right: 60px;
+        background: #fdfaf2;
+        border: 5px solid #221c17;
+        border-radius: 4px;
+        box-shadow: 6px 8px 0px #221c17;
+        padding: 22px 30px;
+        text-align: center;
+        z-index: 120;
+      }
+
+      .caption-text {
+        font-family: 'Barlow Semi Condensed', sans-serif;
+        font-size: 38px;
+        font-weight: 800;
+        color: #221c17;
+        line-height: 1.35;
+        letter-spacing: 0.5px;
+      }
+
+      .highlight-teal {
+        color: #2f7f7a;
+        font-weight: 900;
+      }
+
+      .highlight-ochre {
+        color: #c65f3a;
+        font-weight: 900;
+      }
+
+      .highlight-mustard {
+        color: #b58319;
+        font-weight: 900;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="60.71"
+      data-width="1080"
+      data-height="1920"
+      data-fps="30"
+    >
+      <!-- Audio Voiceover Layer -->
+      <audio
+        id="a-roll-audio"
+        src="audio.wav"
+        data-start="0"
+        data-duration="60.71"
+        data-track-index="2"
+        data-volume="1"
+      ></audio>
+
+      <!-- Overlay Paper Texture -->
+      <div class="paper-overlay"></div>
+
+      <!-- ================= SCENE 1: ZAMAN KUNO & LINEN/WOL (0.0s - 13.5s) ================= -->
+      <div id="scene1" class="clip" data-start="0" data-duration="13.5" data-track-index="1">
+        <!-- Torn teal paper sky -->
+        <div class="torn-teal-bg"></div>
+
+        <!-- Mustard Sun Disc -->
+        <div id="sun_s1" class="mustard-sun" style="top: 140px; right: 100px;"></div>
+
+        <!-- Torn ochre decorative strip -->
+        <div class="torn-ochre-strip" style="top: 260px; left: 80px; width: 440px; height: 18px; transform: rotate(-3deg);"></div>
+
+        <!-- Typewriter Header -->
+        <div id="tag_s1" class="typewriter-slip" style="top: 120px; left: 90px; transform: rotate(-2deg);">
+          SEJAK KAPAN KITA MEMAKAINYA?
+        </div>
+
+        <!-- Classical Roman Statue with Bath Drape -->
+        <div id="statue_s1" class="paper-cutout-high" style="position: absolute; left: 160px; top: 340px; width: 440px;">
+          <img src="assets/roman_statue.png" style="width: 440px;" alt="Patung Romawi Kuno" />
+        </div>
+
+        <!-- Plant & Wool Engraving Props -->
+        <div id="botany_s1" class="paper-cutout" style="position: absolute; right: 80px; top: 580px; width: 340px;">
+          <img src="assets/cotton_plant.png" style="width: 340px;" alt="Serat Alami" />
+          <div class="red-badge" style="bottom: -20px; right: 20px; transform: rotate(4deg);">
+            LINEN & WOL KUNO
+          </div>
+        </div>
+
+        <!-- Caption 1 -->
+        <div class="caption-card">
+          <div class="caption-text">
+            Pernah kepikiran nggak, <span class="highlight-ochre">sejak kapan</span> manusia mulai menggunakan handuk?
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= SCENE 2: TITIK BALIK DI BURSA ABAD KE-17 (13.5s - 29.0s) ================= -->
+      <div id="scene2" class="clip" data-start="13.5" data-duration="15.5" data-track-index="1">
+        <!-- Background Torn Parchment Plate -->
+        <div style="position: absolute; top: 80px; left: 50px; width: 980px; height: 1400px; background: #e8d9bd; border: 4px solid #f6eedb; box-shadow: 0 16px 40px rgba(34,28,23,0.4);">
+          <!-- Ottoman Hammam Dome Arch (Engraved Background) -->
+          <img src="assets/hammam_dome.png" class="paper-cutout-flat" style="position: absolute; top: 40px; left: 60px; width: 860px; opacity: 0.9;" alt="Hammam Dome" />
+        </div>
+
+        <!-- Typewriter Label: BURSA • ABAD 17 -->
+        <div id="tag_s2" class="typewriter-slip" style="top: 130px; left: 100px; transform: rotate(-3deg);">
+          BURSA, TURKI • ABAD KE-17
+        </div>
+        <div class="red-badge" style="top: 130px; right: 90px; transform: rotate(2deg);">
+          ERA OTTOMAN
+        </div>
+
+        <!-- Ottoman Handloom Weaver -->
+        <div id="weaver_s2" class="paper-cutout" style="position: absolute; left: 90px; top: 560px; width: 440px; z-index: 20;">
+          <img src="assets/ottoman_weaver.png" style="width: 440px;" alt="Penenun Tradisional" />
+        </div>
+
+        <!-- Authentic Turkish Pestemal Towel Floating -->
+        <div id="pestemal_s2" class="paper-cutout-high" style="position: absolute; right: 80px; top: 480px; width: 420px; z-index: 25;">
+          <img src="assets/pestemal_towel.png" style="width: 420px;" alt="Kain Tenun Pestemal" />
+          <div class="typewriter-slip" style="bottom: -20px; left: 40px; transform: rotate(3deg); background: #fdf6e2; font-size: 28px;">
+            KAIN TENUN "PESTEMAL"
+          </div>
+        </div>
+
+        <!-- Ottoman Postage Stamp 1650 -->
+        <div id="stamp_s2" class="paper-cutout" style="position: absolute; right: 120px; bottom: 420px; width: 220px; z-index: 30; transform: rotate(-8deg);">
+          <img src="assets/bursa_stamp.png" style="width: 220px;" alt="Stempel Bursa" />
+        </div>
+
+        <!-- Caption 2 -->
+        <div class="caption-card">
+          <div class="caption-text">
+            Sejarah handuk erat kaitannya dengan <span class="highlight-teal">Bursa, Turki</span>. Pada abad ke-17, Ottoman menciptakan tenunan <span class="highlight-ochre">Pestemal</span>.
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= SCENE 3: REVOLUSI KATUN ABAD KE-19 (29.0s - 39.3s) ================= -->
+      <div id="scene3" class="clip" data-start="29.0" data-duration="10.3" data-track-index="1">
+        <!-- Torn ochre field -->
+        <div style="position: absolute; top: 80px; left: 50px; width: 980px; height: 1400px; background: #d49372; border: 4px solid #f6eedb; box-shadow: 0 16px 40px rgba(34,28,23,0.4);"></div>
+
+        <div class="typewriter-slip" style="top: 120px; left: 100px; transform: rotate(-2deg);">
+          ABAD KE-19 • REVOLUSI TEKSTIL
+        </div>
+
+        <!-- Ornate Tailor Scissors cutting -->
+        <div id="scissors_s3" class="paper-cutout-high" style="position: absolute; left: 140px; top: 260px; width: 340px; z-index: 25; transform-origin: 30% 70%;">
+          <img src="assets/brass_scissors.png" style="width: 340px;" alt="Gunting Vintage" />
+        </div>
+
+        <!-- Cotton Plant Engraving -->
+        <div id="cotton_s3" class="paper-cutout" style="position: absolute; right: 100px; top: 320px; width: 360px; z-index: 20;">
+          <img src="assets/cotton_plant.png" style="width: 360px;" alt="Katun Murni" />
+        </div>
+
+        <!-- Stack of Plush Folded Towels -->
+        <div id="towels_s3" class="paper-cutout-high" style="position: absolute; left: 240px; top: 700px; width: 600px; z-index: 30;">
+          <img src="assets/stack_towels.png" style="width: 600px;" alt="Tumpukan Handuk Katun" />
+          <div class="red-badge" style="bottom: 20px; right: 40px; font-size: 32px; transform: rotate(-4deg);">
+            DAYA SERAP TINGGI
+          </div>
+        </div>
+
+        <!-- Caption 3 -->
+        <div class="caption-card">
+          <div class="caption-text">
+            Pada abad ke-19, handuk katun bertekstur tebal <span class="highlight-teal">dengan daya serap tinggi</span> mulai populer ke seluruh dunia.
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= SCENE 4: PENYEBARAN GLOBAL & RATUSAN TAHUN (39.3s - 52.0s) ================= -->
+      <div id="scene4" class="clip" data-start="39.3" data-duration="12.7" data-track-index="1">
+        <!-- Torn Teal Background -->
+        <div class="torn-teal-bg"></div>
+
+        <div class="typewriter-slip" style="top: 120px; left: 100px; transform: rotate(-2deg);">
+          DARI TURKI KE SELURUH DUNIA
+        </div>
+
+        <!-- Antique World Globe Map -->
+        <div id="globe_s4" class="paper-cutout-high" style="position: absolute; left: 240px; top: 260px; width: 600px; z-index: 15;">
+          <img src="assets/world_globe.png" style="width: 600px;" alt="Peta Dunia" />
+        </div>
+
+        <!-- Antique Engraved Hourglass (Time passage) -->
+        <div id="hourglass_s4" class="paper-cutout-high" style="position: absolute; right: 120px; top: 760px; width: 320px; z-index: 25;">
+          <img src="assets/hourglass.png" style="width: 320px;" alt="Jam Pasir Ratusan Tahun" />
+        </div>
+
+        <!-- Typewriter Ribbon: RATUSAN TAHUN -->
+        <div id="ribbon_s4" class="paper-cutout" style="position: absolute; left: 120px; top: 920px; width: 480px; z-index: 30;">
+          <img src="assets/typewriter_ribbon.png" style="width: 480px;" alt="Pita Mesin Tik" />
+          <div style="position: absolute; left: 50px; top: 38px; font-family: 'Special Elite', monospace; font-size: 34px; font-weight: bold; color: #221c17;">
+            SEJARAH RATUSAN TAHUN
+          </div>
+        </div>
+
+        <!-- Caption 4 -->
+        <div class="caption-card">
+          <div class="caption-text">
+            Benda yang kita anggap sederhana ini, ternyata punya <span class="highlight-ochre">sejarah panjang selama ratusan tahun</span>.
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= SCENE 5: REFLEKSI & PENUTUP (52.0s - 60.71s) ================= -->
+      <div id="scene5" class="clip" data-start="52.0" data-duration="8.71" data-track-index="1">
+        <!-- Base Parchment Card with border -->
+        <div style="position: absolute; top: 80px; left: 50px; width: 980px; height: 1400px; background: #fdfaf2; border: 6px solid #221c17; box-shadow: 0 20px 50px rgba(34,28,23,0.5);">
+          <!-- Decorative Engraved Header -->
+          <div style="text-align: center; margin-top: 60px;">
+            <div style="font-family: 'IM Fell English SC', serif; font-size: 56px; font-weight: bold; color: #221c17; letter-spacing: 3px;">
+              SEJARAH SELEMBAR HANDUK
+            </div>
+            <div style="width: 220px; height: 4px; background: #c65f3a; margin: 16px auto;"></div>
+            <div style="font-family: 'Special Elite', monospace; font-size: 32px; color: #555;">
+              BURSA 1650 — DUNIA HARI INI
+            </div>
+          </div>
+
+          <!-- Featured Centerpiece: Stack of plush towels with pestemal drape -->
+          <div id="final_towels" class="paper-cutout-high" style="position: absolute; left: 200px; top: 340px; width: 580px;">
+            <img src="assets/stack_towels.png" style="width: 580px;" alt="Handuk Modern" />
+          </div>
+
+          <div id="final_pestemal" class="paper-cutout" style="position: absolute; left: 80px; top: 620px; width: 380px;">
+            <img src="assets/pestemal_towel.png" style="width: 380px;" alt="Pestemal Kuno" />
+          </div>
+
+          <!-- Crimson Wax Seal stamped firmly -->
+          <div id="seal_s5" class="paper-cutout-high" style="position: absolute; right: 100px; top: 880px; width: 220px;">
+            <img src="assets/wax_seal.png" style="width: 220px;" alt="Segel Lilin Merah" />
+          </div>
+
+          <!-- Grand Closing Badge -->
+          <div id="final_card_s5" class="paper-cutout-high" style="position: absolute; left: 70px; top: 1120px; width: 840px; background: #c65f3a; color: #fff; border: 4px solid #221c17; padding: 20px; text-align: center; border-radius: 6px; transform: rotate(-1deg);">
+            <div style="font-family: 'Lilita One', cursive; font-size: 40px; letter-spacing: 2px;">
+              TIDAK SESINGKAT WAKTU KITA MEMAKAINYA ✨
+            </div>
+          </div>
+        </div>
+
+        <!-- Caption 5 -->
+        <div class="caption-card">
+          <div class="caption-text">
+            Ingatlah, handuk punya perjalanan sejarah yang <span class="highlight-ochre">nggak sesingkat</span> waktu kita menggunakannya.
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- GSAP Master Animation Sync (Lemo-Opuscar & HyperFrames Contract) -->
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      // ================= SCENE 1 (0.0 - 13.5s) =================
+      tl.fromTo("#statue_s1", { y: 200, opacity: 0 }, { y: 0, opacity: 1, duration: 1.2, ease: "back.out(1.5)" }, 0.5);
+      tl.fromTo("#sun_s1", { scale: 0.2, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.8, ease: "power2.out" }, 1.0);
+      tl.fromTo("#tag_s1", { y: -50, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: "power3.out" }, 1.5);
+      tl.fromTo("#botany_s1", { x: 100, opacity: 0 }, { x: 0, opacity: 1, duration: 1.0, ease: "back.out(1.4)" }, 4.5);
+      tl.to("#statue_s1", { y: -12, repeat: 6, yoyo: true, duration: 1.2, ease: "steps(4)" }, 5.5);
+
+      // ================= SCENE 2 (13.5 - 29.0s) =================
+      tl.fromTo("#tag_s2", { scale: 2.5, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: "power4.in" }, 14.0);
+      tl.fromTo("#weaver_s2", { x: -100, opacity: 0 }, { x: 0, opacity: 1, duration: 1.0, ease: "power2.out" }, 15.0);
+      tl.fromTo("#pestemal_s2", { y: -120, opacity: 0 }, { y: 0, opacity: 1, duration: 1.2, ease: "bounce.out" }, 17.5);
+      tl.to("#pestemal_s2", { rotation: 4, repeat: 7, yoyo: true, duration: 1.0, ease: "sine.inOut" }, 19.5);
+      tl.fromTo("#stamp_s2", { scale: 3.5, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.4, ease: "power4.in" }, 22.0);
+      tl.to("#weaver_s2", { y: -8, repeat: 5, yoyo: true, duration: 1.1, ease: "steps(3)" }, 23.5);
+
+      // ================= SCENE 3 (29.0 - 39.3s) =================
+      tl.fromTo("#scissors_s3", { rotation: -35, opacity: 0 }, { rotation: -10, opacity: 1, duration: 0.8, ease: "power2.out" }, 29.5);
+      tl.to("#scissors_s3", { rotation: -30, repeat: 6, yoyo: true, duration: 0.6, ease: "steps(3)" }, 30.5);
+      tl.fromTo("#cotton_s3", { scale: 0.4, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.8, ease: "back.out(1.7)" }, 31.0);
+      tl.fromTo("#towels_s3", { y: 150, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: "bounce.out" }, 33.5);
+      tl.to("#towels_s3", { scale: 1.03, repeat: 4, yoyo: true, duration: 0.9, ease: "sine.inOut" }, 35.0);
+
+      // ================= SCENE 4 (39.3 - 52.0s) =================
+      tl.fromTo("#globe_s4", { scale: 0.5, rotation: -15, opacity: 0 }, { scale: 1, rotation: 0, opacity: 1, duration: 1.2, ease: "power2.out" }, 39.8);
+      tl.to("#globe_s4", { rotation: 8, repeat: 5, yoyo: true, duration: 1.6, ease: "sine.inOut" }, 41.5);
+      tl.fromTo("#hourglass_s4", { y: -80, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: "back.out(1.5)" }, 43.0);
+      tl.to("#hourglass_s4", { rotation: 5, repeat: 6, yoyo: true, duration: 1.0, ease: "steps(3)" }, 44.5);
+      tl.fromTo("#ribbon_s4", { x: -80, opacity: 0 }, { x: 0, opacity: 1, duration: 0.6, ease: "power3.out" }, 46.5);
+
+      // ================= SCENE 5 (52.0 - 60.71s) =================
+      tl.fromTo("#final_towels", { scale: 0.8, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.9, ease: "back.out(1.5)" }, 52.5);
+      tl.fromTo("#final_pestemal", { x: -60, opacity: 0 }, { x: 0, opacity: 1, duration: 0.8, ease: "power2.out" }, 53.5);
+      tl.fromTo("#seal_s5", { scale: 4, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: "power4.in" }, 55.0);
+      tl.fromTo("#final_card_s5", { scale: 0.3, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.6, ease: "elastic.out(1, 0.6)" }, 56.5);
+      tl.to("#final_card_s5", { scale: 1.03, repeat: 3, yoyo: true, duration: 1.0, ease: "sine.inOut" }, 57.5);
+
+      window.__timelines["main"] = tl;
+
+      // Lemo-Opuscar native engine contract
+      window.DUR = 60.71;
+      window.READY = true;
+      window.render = function(t) {
+        tl.seek(t);
+      };
+    </script>
+  </body>
+</html>
